@@ -1,0 +1,65 @@
+var AttachmentMaker = {
+  attachments: {},
+  threads: [],
+  create: function(data) {
+    data.forEach(function(t) {
+      this.reduceMessages(t.messages)
+    }.bind(this))
+  },
+  reduceMessages: function(messages) {
+    messages.forEach(function(message) {
+      if(message.payload && message.payload.parts) this.reduceParts(message);
+    }.bind(this))
+  },
+  reduceParts: function(message) {
+    message.payload.parts.forEach(function(part) {
+      if(part.body.attachmentId && part.filename){
+        var appended = this.scoreAndAppendAttachments(message, part);
+        // we didn't find a match due to empty attachment list or nothing was appended
+        // on the previous step. let's add the file as a new
+        if(!appended) this.appendFile(message, part)
+      }
+    }.bind(this));
+  },
+  scoreAndAppendAttachments: function(message, part) {
+    var appended;
+    var attachmentNames = Object.keys(this.attachments);
+    if(attachmentNames.length === 0) return;
+    attachmentNames.some(function(name) {
+      var score = this.compare(name, part.filename);
+      //same file, it's most likely a reply
+      if(score === 1) return;
+      // same file different version
+      if(score >= 0.70) appended = this.appendFile(message, part, name)
+    }.bind(this))
+    return appended;
+  },
+  compare: function(name1, name2) {
+    var base, version;
+    if(name1.length > name2) {
+      base = name2;
+      version = name1;
+    } else {
+      base = name1;
+      version = name2;
+    }
+    return version.score(base);
+  },
+  appendFile: function(message, part, at) {
+    var type = part.filename.split(".");
+    type = type[1] ? type[1] : type[0];
+    at = at || part.filename;
+    this.attachments[at] = this.attachments[at] || [];
+    var data = {
+      type: type,
+      filename: part.filename,
+      id: part.body.attachmentId,
+      messageId: message.id,
+      threadId: message.threadId
+    }
+    this.attachments[at].push(data);
+    return true
+  }
+}
+
+

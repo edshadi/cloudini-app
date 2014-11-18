@@ -1,0 +1,297 @@
+/*
+  globals
+*/
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+.hidden {
+  display: none;
+}
+ul {
+  list-style: none;
+}
+/*
+  sidebar
+*/
+#cloudini {
+  float: right;
+  margin-right: 1em;
+}
+#cloudini-launcher {
+  max-height: 5%;
+  min-height: 0;
+  font-size: 1em;
+  background: none;
+  top: 0;
+  right: 0;
+  color: rgb(31, 46, 61);
+}
+
+#sidebar {
+  position: fixed;
+  z-index: 9999;
+  right: 0;
+  top: 0;
+  width: 25%;
+  min-height: 100%;
+  max-height: 100%;
+  background-color: #C5C6C7;
+  overflow: scroll;
+  z-index: 1000;
+  padding: 0;
+  font-size: 1.4em;
+}
+
+#sidebar-header {
+  padding: 0.8em;
+  background-color: #1F2E3D;
+  height: 8%;
+  position: relative;
+  top: 0;
+  color: #fff;
+}
+
+#sidebar-body {
+  padding: 0.4em 0.4em 0 0.4em;
+  overflow: scroll;
+}
+
+/*
+  thread group
+*/
+
+.thread-group-date {
+  font-size: 0.7em;
+  padding-bottom: 0.6em;
+}
+
+/*
+  threads
+*/
+
+.thread-group {
+  padding: 0 0 1em 0;
+}
+
+.threads {
+  width: 90%;
+  margin: auto;
+  border: 0 0.125em 0.125em 0.125em solid #959A98;
+  border-bottom-left-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+  box-shadow: 0.1em 0.1em 0.1em 0.1em #ABAEAF;
+  height: auto;
+  font-size: 0.7em;
+  margin: auto;
+}
+
+.timeline {
+  padding: 0 0 0.4em 0.4em;
+  color: #41454C;
+  font-weight: bold;
+}
+
+/*
+  thread
+*/
+
+.thread {
+  background: #fff;
+  margin-bottom: 1em;
+}
+
+.thread-file {
+  font-size: 0.8em;
+  border: 0.2em solid #000;
+  padding: 0.4em;
+  height: 10%;
+  background: #EEEFF3;
+  border-radius: 0.5em;
+  position: relative;
+  left: -7%;
+  width: 108%;
+  margin-bottom: 0.5em;
+}
+
+.thread-file:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 32px 32px 0;
+  border-style: solid;
+}
+
+.thread-file img {
+  height: 1.7em;
+  width: 1.7em;
+  vertical-align: middle;
+  padding: 0 0.2em 0 0;
+}
+
+
+.thread-file.new {
+  border-color: #5FB83C;
+}
+
+.thread-file.new:before {
+  border-color: #EEEFF3 #5FB83C;
+}
+
+.thread-file.old {
+  border-color: #d3d4d8;
+}
+
+.thread-file.old:before {
+  border-color: #EEEFF3 #ecedf1;
+}
+
+.thread-file.new-version {
+  border-color: #4293f7;
+}
+
+.thread-file.new-version:before {
+  border-color: #EEEFF3 #4293f7;
+}
+
+.file-actions {
+  margin-left: 1em;
+}
+
+.file-actions span a, .file-actions span a:visited {
+  text-decoration: none;
+  color: #5A5A5A;
+  font-size: 0.8em;
+  margin-left: 2em;
+}
+
+.message .file-actions span {
+  padding: 0;
+}
+.file-name {
+  color: #3f444c;
+  font-size: 1em;
+  margin-left: 0;
+}
+
+/*
+  message
+*/
+
+.message span {
+  padding: 0.5em;
+}
+.message span.file-icon {
+  border: solid 0.1em;
+  background-color: white;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.2em;
+}
+
+img.envelope {
+  width: 1.2em;
+  vertical-align: middle;
+}
+
+.thread-data {
+  background-color: #EEEFF3;
+  margin: 0;
+  padding: 0;
+  min-height: 2em;
+}
+
+.thread-data li {
+  float: left;
+  margin: 0.3em;
+}
+
+.thread-data li.message-count {
+  float: right;
+  margin-right: 0.5em;
+}
+
+.thread-data li.message-title {
+  margin-left: 1em;
+}
+
+.thread-data .message-count {
+  display: table;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #D1531C;
+  border-radius: 0.2em;
+}
+
+.thread-data .message-count span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  color: white
+}
+
+.thread-data span {
+  padding: 0 0.5em;
+}
+
+.thread-data span.message-count {
+  background-color: #D1531C;\
+  padding: 0.2em 0.4em;
+  width: 1em;
+  border-radius: 0.2em;
+}
+
+.participant-gravatar img {
+  height: 1.2em;
+  width: 1.2em;
+  margin: 0 0.25em;
+  border-radius: 1em;
+}
+
+.message-participant {
+  padding: 0.5em 0;
+  color: #5A5A5A;
+}
+
+.participant-name {
+  text-decoration: underline;
+}
+
+/*
+  menu
+*/
+
+#menu {
+  position: absolute;
+  right: 0;
+  top: 1em;
+}
+
+img.menu-icon {
+  float: right;
+  padding: 0 0.5em;
+}
+
+#menu-content {
+  position: relative;
+  top: 2.23em;
+  background-color: #1F2E3D;
+  z-index: 1000;
+  right: 0;
+  font-size: 0.8em;
+  padding: 1.5em;
+}
+
+#menu ul {
+  padding: 0.5em 0 0 0;
+  margin: 0.2em;
+}
+
+#menu ul li a, #menu ul li a:visited {
+  color: white;
+  text-decoration: none;
+}
