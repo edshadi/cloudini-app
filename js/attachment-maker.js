@@ -79,3 +79,4 @@ var AttachmentMaker = {
   }
 }
 
+module.exports = AttachmentMaker;

@@ -4,25 +4,26 @@ var request = require('browser-request')
   , emitter = new events.EventEmitter()
   , attachmentMaker = require('../attachment-maker')
   , data = require('../../cloudini-extension-export')
-  , _attachments = [
-    {filename: "proto_1.pdf", status: 'read',  }
-  ]
+  , _attachments = {}
+  , CHANGE_EVENT = 'change'
   ;
 
 module.exports = {
-  fromCache: function(callback) {
-    window.rawData = data.raw.users.edshadi.theads;
-    window.threads = [];
-    data.users.edshadi.groups.forEach(function(group){ group.threads.forEach(function(t) {window.threads.push(t)}) });
-    var groups = [];
-    this.emit('change', groups);
+  all: function() {
+    attachmentMaker.create(data.raw.users.edshadi.theads);
+    _attachments = attachmentMaker.attachments;
+    this.emit(CHANGE_EVENT);
   },
   attachments: function() {
-    window.rawData = data.raw.users.edshadi.theads;
-    window.threads = [];
-    data.users.edshadi.groups.forEach(function(group){ group.threads.forEach(function(t) {window.threads.push(t)}) });
     return _attachments;
+  },
+  onChangeEvent: function(callback) {
+    this.on(CHANGE_EVENT, callback)
   },
   on: emitter.on,
   emit: emitter.emit
 };
+// window.rawData = data.raw.users.edshadi.theads;
+// window.threads = [];
+// data.users.edshadi.groups.forEach(function(group){ group.threads.forEach(function(t) {window.threads.push(t)}) });
+// return _attachments;
