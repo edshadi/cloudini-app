@@ -9031,7 +9031,7 @@ module.exports = {
           }, {
             "historyId" : "2640116",
             "id" : "1488ef21a451b675",
-            "labelIds" : [ "INBOX", "IMPORTANT", "CATEGORY_PERSONAL" ],
+            "labelIds" : [ "INBOX", "IMPORTANT", "CATEGORY_PERSONAL", "UNREAD"],
             "payload" : {
               "body" : {
                 "size" : 0
@@ -9135,7 +9135,7 @@ module.exports = {
           "messages" : [ {
             "historyId" : "2519179",
             "id" : "1476e3df699415af",
-            "labelIds" : [ "INBOX", "CATEGORY_PERSONAL" ],
+            "labelIds" : [ "INBOX", "CATEGORY_PERSONAL", "UNREAD" ],
             "payload" : {
               "body" : {
                 "size" : 0
@@ -9271,7 +9271,7 @@ module.exports = {
           "messages" : [ {
             "historyId" : "2590018",
             "id" : "14813919b7477985",
-            "labelIds" : [ "INBOX", "CATEGORY_PERSONAL" ],
+            "labelIds" : [ "INBOX", "CATEGORY_PERSONAL", "UNREAD" ],
             "payload" : {
               "body" : {
                 "size" : 0
