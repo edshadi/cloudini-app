@@ -46,10 +46,12 @@ window.AttachmentMaker = {
     return version.score(base);
   },
   appendFile: function(message, part, at) {
-    var type = part.filename.split(".");
-    type = type[1] ? type[1] : type[0];
+    var type = this.getFileType(part.filename);
     at = at || part.filename;
-    this.attachments[at] = this.attachments[at] || [];
+    this.attachments[at] = this.attachments[at] || {};
+    this.attachments[at][message.threadId] = this.attachments[at][message.threadId] || {};
+    var from = message.payload.headers.filter(function(header) { return header.name === "From" })[0].value;
+    this.attachments[at][message.threadId][from] = this.attachments[at][message.threadId][from] || [];
     var data = {
       type: type,
       filename: part.filename,
@@ -63,21 +65,28 @@ window.AttachmentMaker = {
       if(header.name === "Date") data.date = header.value;
       if(header.name === "Subject") data.subject = header.value;
     }.bind(this));
+    // set the thread's data to the latest message
+    this.attachments[at][message.threadId].date = data.date;
+    this.attachments[at][message.threadId].subject = data.subject;
 
     data.unread = message.labelIds.filter(function(label) {
       return label === "UNREAD"
     })[0];
 
-    if(this.threadExists(this.attachments[at], message.threadId))
-      data.versions.push(data);
+    // if(this.threadExists(this.attachments[at], message.threadId))
+    //   data.versions.push(data);
 
-    this.attachments[at].push(data);
+    this.attachments[at][message.threadId][from].push(data);
     return true
   },
   threadExists: function(threads, threadId) {
     return threads.filter(function(thread) {
       return thread.threadId === threadId
     }).length > 0;
+  },
+  getFileType: function(filename) {
+    var type = filename.split(".");
+    return type[1] ? type[1] : type[0];
   }
 }
 

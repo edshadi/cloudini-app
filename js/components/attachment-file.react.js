@@ -6,16 +6,17 @@ var AttachmentFile = React.createClass({
   render: function() {
     return (
       <div>
-        <h3>{this.props.name}</h3>
+        <i>{this.props.name}</i>
         {this.renderThreads()}
+        <hr />
       </div>
     );
   },
   renderThreads: function() {
     var threads = [];
-    this.props.threads.forEach(function(thread) {
-      threads.push(<AttachmentThread thread={thread} />)
-    })
+    Object.keys(this.props.threads).forEach(function(threadId) {
+      threads.push(<AttachmentThread key={threadId} thread={this.props.threads[threadId]} />)
+    }.bind(this));
     return threads;
   }
 
