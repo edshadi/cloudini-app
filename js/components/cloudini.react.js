@@ -5,28 +5,25 @@
 var React = require('react');
 var Sidebar = require('./sidebar.react');
 var AttachmentStore = require('../stores/attachment-store');
+var AttachmentGroup = require('./attachment-group.react');
 var Launcher = require('./launcher.react');
 var Cloudini = React.createClass({
   getInitialState: function() {
     return {
-      groups: {},
+      attachments: {},
       hidden: false
     }
   },
-
-  componentWillMount: function() {
-    AttachmentStore.on('change', function(groups) {
-      this.setState({
-        groups: groups
-      })
-    }.bind(this))
-    AttachmentStore.fromCache();
+  componentDidMount: function() {
+    AttachmentStore.onChangeEvent(function() {
+      if(this.isMounted()) this.setState({ attachments: AttachmentStore.attachments() })
+    }.bind(this));
+    AttachmentStore.all();
   },
-
   render: function() {
     return (
       <div className="cloudini-container">
-        {this.state.hidden ? this.renderLauncher() : this.renderSidebar()}
+        <AttachmentGroup attachments={this.state.attachments} />
       </div>
     );
   },
@@ -34,7 +31,7 @@ var Cloudini = React.createClass({
     return(<Launcher label="+ C" handleClick={this.showSidebar} />)
   },
   renderSidebar: function() {
-    return(<Sidebar groups={this.state.groups} hideSidebar={this.showSidebar}/>);
+    return(<Sidebar attachments={this.state.attachments} hideSidebar={this.showSidebar}/>);
   },
   showSidebar: function(e) {
     e.preventDefault();

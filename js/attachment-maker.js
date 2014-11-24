@@ -1,4 +1,4 @@
-var AttachmentMaker = {
+window.AttachmentMaker = {
   attachments: {},
   threads: [],
   create: function(data) {
@@ -29,7 +29,7 @@ var AttachmentMaker = {
       var score = this.compare(name, part.filename);
       //same file, it's most likely a reply
       if(score === 1) return;
-      // same file different version
+      // same file, different version
       if(score >= 0.70) appended = this.appendFile(message, part, name)
     }.bind(this))
     return appended;
@@ -50,26 +50,28 @@ var AttachmentMaker = {
     type = type[1] ? type[1] : type[0];
     at = at || part.filename;
     this.attachments[at] = this.attachments[at] || [];
-    if(this.threadExists(this.attachments[at], message.threadId)) return true;
     var data = {
       type: type,
       filename: part.filename,
       id: part.body.attachmentId,
       messageId: message.id,
       threadId: message.threadId,
+      versions: []
     }
     message.payload.headers.some(function(header) {
-      if(header.name == "From") data.from = header.value;
-      if(header.name == "Date") data.date = header.value;
-      if(header.name == "Subject") data.subject = header.value;
+      if(header.name === "From") data.from = header.value;
+      if(header.name === "Date") data.date = header.value;
+      if(header.name === "Subject") data.subject = header.value;
     }.bind(this));
 
     data.unread = message.labelIds.filter(function(label) {
       return label === "UNREAD"
     })[0];
 
-    this.attachments[at].push(data);
+    if(this.threadExists(this.attachments[at], message.threadId))
+      data.versions.push(data);
 
+    this.attachments[at].push(data);
     return true
   },
   threadExists: function(threads, threadId) {

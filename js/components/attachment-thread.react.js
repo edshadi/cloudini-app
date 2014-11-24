@@ -8,6 +8,7 @@ var AttachmentThread = React.createClass({
       <div>
         <h3>{this.props.thread.filename}</h3>
         <p>{this.props.thread.subject}</p>
+        <p>Previous Versions: {this.props.thread.versions.length}</p>
       </div>
     );
   }
