@@ -64,7 +64,7 @@ ul {
   thread group
 */
 
-.thread-group-date {
+.attachment-group-date {
   font-size: 0.7em;
   padding-bottom: 0.6em;
 }
@@ -73,7 +73,7 @@ ul {
   threads
 */
 
-.thread-group {
+.attachment-group {
   padding: 0 0 1em 0;
 }
 
@@ -87,6 +87,7 @@ ul {
   height: auto;
   font-size: 0.7em;
   margin: auto;
+  margin-bottom: 1em;
 }
 
 .timeline {
@@ -101,7 +102,6 @@ ul {
 
 .thread {
   background: #fff;
-  margin-bottom: 1em;
 }
 
 .thread-file {
@@ -185,12 +185,13 @@ ul {
 .message span {
   padding: 0.5em;
 }
-.message span.file-icon {
+span.file-icon {
   border: solid 0.1em;
   background-color: white;
   text-align: center;
   vertical-align: middle;
   padding: 0.2em;
+  margin: 0 0.2em;
 }
 
 img.envelope {

@@ -9,7 +9,7 @@ var ThreadPerson = React.createClass({
       attachments.push(<div><h3>{attachment.filename}</h3>{attachment.unread ? "NEW" : "OLD"}</div>);
     }.bind(this));
     return (
-      <div>
+      <div className="thread">
         {attachments}
         <i>{this.props.key}</i>
       </div>
