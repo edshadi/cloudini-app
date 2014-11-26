@@ -16,16 +16,7 @@ var ThreadsBlock = React.createClass({
         text: this.props.threads[id].subject,
         messageCount: 4
       }
-      Object.keys(this.props.threads[id]).forEach(function(sender) {
-        var senderObject = {
-          name: sender,
-          avatar: './images/avatar.jpeg',
-          on: this.props.threads[id].date
-        }
-        var messages = this.props.threads[id][sender];
-        if(typeof messages !== 'object') return;
-        threads.push(<ThreadBlock key={id+sender} subject={subject} attachments={messages} sender={senderObject} />)
-      }.bind(this));
+      threads.push(<ThreadBlock key={id} subject={subject} attachments={this.props.threads[id].messages} />)
     }.bind(this))
     return threads;
   }

@@ -9,26 +9,6 @@ var React = require('react')
 
 var Sidebar = React.createClass({
   render: function() {
-    var attachment = {
-      unread: true,
-      type: 'pdf',
-      name: 'sweet file',
-      messageId: 'abcd',
-    }
-    var sender = {
-      name: 'shado@gmail.com',
-      avatar: './images/avatar.jpeg',
-      on: new Date()
-    }
-    var message = {
-      attachments: [attachment],
-      sender: sender
-    }
-    var subject = {
-      text: "GUI toolkit",
-      messageCount: 2
-    }
-
     return (
       <div id="sidebar">
         <Launcher label="- C" handleClick={this.props.hideSidebar} />

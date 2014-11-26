@@ -51,7 +51,8 @@ window.AttachmentMaker = {
     this.attachments[at] = this.attachments[at] || {};
     this.attachments[at][message.threadId] = this.attachments[at][message.threadId] || {};
     var from = message.payload.headers.filter(function(header) { return header.name === "From" })[0].value;
-    this.attachments[at][message.threadId][from] = this.attachments[at][message.threadId][from] || [];
+    this.attachments[at][message.threadId].messages = this.attachments[at][message.threadId].messages || {};
+    this.attachments[at][message.threadId].messages[from] = this.attachments[at][message.threadId].messages[from] || [];
     var data = {
       type: type,
       filename: part.filename,
@@ -76,7 +77,7 @@ window.AttachmentMaker = {
     // if(this.threadExists(this.attachments[at], message.threadId))
     //   data.versions.push(data);
 
-    this.attachments[at][message.threadId][from].push(data);
+    this.attachments[at][message.threadId].messages[from].push(data);
     return true
   },
   threadExists: function(threads, threadId) {
