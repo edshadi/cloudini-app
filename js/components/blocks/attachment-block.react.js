@@ -14,7 +14,7 @@ var AttachmentBlock = React.createClass({
         <div className="file-actions">
           <span><a href={this.previewLink()} target="_blank">Preview</a></span>
           <span><a href={this.downloadLink()}>Download</a></span>
-          <span><a href="#">3 Versions</a></span>
+          <span><a href="#">{this.props.previousVersionCount || 0} Versions</a></span>
         </div>
       </div>
     );

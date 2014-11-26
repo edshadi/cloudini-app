@@ -14,8 +14,8 @@ var MessageBlock = React.createClass({
   },
   renderAttachmentBlocks: function() {
     var attachments = [];
-    this.props.attachments.forEach(function(attachment) {
-      attachments.push(<AttachmentBlock attachment={attachment} />)
+    this.props.attachments.forEach(function(attachment, i) {
+      attachments.push(<AttachmentBlock attachment={attachment} previousVersionCount={i} />)
     }.bind(this));
     return attachments;
   }

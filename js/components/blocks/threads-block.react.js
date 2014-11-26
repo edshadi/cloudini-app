@@ -17,7 +17,7 @@ var ThreadsBlock = React.createClass({
         text: this.props.threads[id].subject,
         messageCount: Object.keys(messages).length
       }
-      threads.push(<ThreadBlock key={id} subject={subject} attachments={messages} />)
+      threads.push(<ThreadBlock key={id} date={this.props.threads[id].date} subject={subject} attachments={messages} />)
     }.bind(this))
     return threads;
   }

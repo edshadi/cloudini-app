@@ -17,7 +17,7 @@ var ThreadBlock = React.createClass({
       var senderObject = {
         name: sender,
         avatar: './images/avatar.jpeg',
-        on: this.props.attachments[sender].date
+        on: this.props.date
       }
       messages.push(<MessageBlock attachments={this.props.attachments[sender]} sender={senderObject} />)
     }.bind(this));
