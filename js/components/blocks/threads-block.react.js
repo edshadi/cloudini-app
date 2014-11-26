@@ -12,11 +12,12 @@ var ThreadsBlock = React.createClass({
   renderThreads: function() {
     var threads = [];
     Object.keys(this.props.threads).forEach(function(id) {
+      var messages = this.props.threads[id].messages;
       var subject = {
         text: this.props.threads[id].subject,
-        messageCount: 4
+        messageCount: Object.keys(messages).length
       }
-      threads.push(<ThreadBlock key={id} subject={subject} attachments={this.props.threads[id].messages} />)
+      threads.push(<ThreadBlock key={id} subject={subject} attachments={messages} />)
     }.bind(this))
     return threads;
   }
