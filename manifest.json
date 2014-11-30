@@ -3,7 +3,7 @@
   "version": "0.2",
   "description": "Project Mangement right in your gmail",
   "background": {
-    "page": "./js/background/background.html"
+    "page": "./background/background.html"
   },
   "content_scripts": [
     {
