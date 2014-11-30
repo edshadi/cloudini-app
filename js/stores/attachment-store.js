@@ -1,9 +1,8 @@
-var request = require('browser-request')
-  , constants = require('../constants/constants')
+var constants = require('../constants/constants')
   , events = require('events')
   , emitter = new events.EventEmitter()
-  , attachmentMaker = require('../attachment-maker')
-  , data = require('../../cloudini-extension-export')
+  , attachmentMaker = require('../makers/attachment-maker')
+  , data = require('../firebase-cache')
   , _attachments = {}
   , CHANGE_EVENT = 'change'
   ;
@@ -23,7 +22,3 @@ module.exports = {
   on: emitter.on,
   emit: emitter.emit
 };
-// window.rawData = data.raw.users.edshadi.theads;
-// window.threads = [];
-// data.users.edshadi.groups.forEach(function(group){ group.threads.forEach(function(t) {window.threads.push(t)}) });
-// return _attachments;

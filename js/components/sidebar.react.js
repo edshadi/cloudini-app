@@ -1,9 +1,8 @@
 /** @jsx React.DOM */
 
 var React = require('react')
-  // , Attachments = require('./attachments.react')
   , SidebarHeader = require('./sidebar-header.react')
-  , ThreadsBlock = require('./blocks/threads-block.react')
+  , Threads = require('./threads.react')
   , Launcher = require('./launcher.react')
   ;
 
@@ -22,7 +21,7 @@ var Sidebar = React.createClass({
   renderAttachments: function() {
     var attachments = [];
     Object.keys(this.props.attachments).forEach(function(filename) {
-      attachments.push(<ThreadsBlock key={filename} threads={this.props.attachments[filename]} />)
+      attachments.push(<Threads key={filename} threads={this.props.attachments[filename]} />);
     }.bind(this));
     return attachments;
   }

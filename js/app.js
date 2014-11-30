@@ -1,13 +1,12 @@
 /** @jsx React.DOM */
-// JSON.stringify(groups, null, "  ");
 var React = require('react')
   , Cloudini = require('./components/cloudini.react')
+  , cloudiniDiv = document.createElement('div')
   ;
 
-var cloudini = document.createElement('div');
-cloudini.setAttribute('id', "cloudini");
+cloudiniDiv.setAttribute('id', "cloudini");
 
 window.onload = function() {
-  document.body.appendChild(cloudini);
-  React.renderComponent(<Cloudini />, cloudini);
+  document.body.appendChild(cloudiniDiv);
+  React.renderComponent(<Cloudini />, cloudiniDiv);
 }

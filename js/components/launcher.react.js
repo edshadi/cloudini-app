@@ -1,8 +1,6 @@
-/**
- * @jsx React.DOM
- */
-
-var React = require('react');
+/** @jsx React.DOM */
+var React = require('react')
+;
 
 var Launcher = React.createClass({
 

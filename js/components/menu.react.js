@@ -1,6 +1,6 @@
 /** @jsx React.DOM */
-
 var React = require('react');
+
 var Menu = React.createClass({
   getInitialState: function() {
     return {
@@ -10,7 +10,7 @@ var Menu = React.createClass({
   render: function() {
     return (
       <div id="menu">
-        <img src="../images/cloudini-menu-icon.png" alt="Menu" className="menu-icon" onClick={this.showMenu}/>
+        <img src="./images/cloudini-menu-icon.png" alt="Menu" className="menu-icon" onClick={this.showMenu}/>
         <div id="menu-content" className={this.state.content}>
           Show files from
           <ul>

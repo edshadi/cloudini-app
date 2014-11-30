@@ -1,7 +1,8 @@
 /** @jsx React.DOM */
+var React = require('react')
+  , Menu = require('./menu.react')
+  ;
 
-var React = require('react');
-var Menu = require('./menu.react');
 var SidebarHeader = React.createClass({
   render: function() {
     return (

@@ -1,2 +1,3 @@
-var CloudiniActions;
+var CloudiniActions = {}
+;
 module.exports = CloudiniActions;

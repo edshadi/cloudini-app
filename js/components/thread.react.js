@@ -1,22 +1,30 @@
 /** @jsx React.DOM */
-var React = require('react');
-var ThreadPerson = require('./thread-person.react');
-var Thread = React.createClass({
+var React = require('react')
+  , Message = require('./message.react')
+  , Subject = require('./subject.react')
+  ;
 
+var Thread = React.createClass({
   render: function() {
-    var people = [];
-    Object.keys(this.props.thread).forEach(function(person) {
-      if(typeof this.props.thread[person] !== 'object') return;
-      people.push(<ThreadPerson key={person} person={this.props.thread[person]} />);
-    }.bind(this));
     return (
-      <div>
-        {people}
-        <p>{this.props.thread.subject} On {new Date(this.props.thread.date).toLocaleString()}</p>
+      <div className="thread">
+        {this.renderMessages()}
+        <Subject subject={this.props.subject} />
       </div>
     );
+  },
+  renderMessages: function() {
+    var messages = [];
+    Object.keys(this.props.attachments).forEach(function(sender) {
+      var senderObject = {
+        name: sender,
+        avatar: './images/avatar.jpeg',
+        on: this.props.date
+      }
+      messages.push(<Message key={sender} attachments={this.props.attachments[sender]} sender={senderObject} />)
+    }.bind(this));
+    return messages;
   }
-
 });
 
 module.exports = Thread;
