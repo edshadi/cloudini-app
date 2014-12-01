@@ -7,7 +7,7 @@ var constants = require('../constants/constants')
   , CHANGE_EVENT = 'change'
   ;
 
-module.exports = {
+var AttachmentStore = {
   all: function() {
     attachmentMaker.create(data.raw.users.edshadi.theads);
     _attachments = attachmentMaker.attachments;
@@ -19,6 +19,15 @@ module.exports = {
   onChangeEvent: function(callback) {
     this.on(CHANGE_EVENT, callback)
   },
+  cacheToFile: function() {
+    this.all()
+    var fs = require('fs')
+    fs.writeFile('/Users/shadi/Development/Github/cloudini-extension/cloudini-app/js/cache/attachment-cache.js', JSON.stringify(this.attachments(),  null, 2), function(err) {
+      console.log(err)
+    }.bind(this))
+  },
   on: emitter.on,
   emit: emitter.emit
 };
+
+module.exports = AttachmentStore;

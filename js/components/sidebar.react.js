@@ -10,7 +10,6 @@ var Sidebar = React.createClass({
   render: function() {
     return (
       <div id="sidebar">
-        <Launcher label="- C" handleClick={this.props.hideSidebar} />
         <SidebarHeader fileStream="INBOX"/>
         <div id="sidebar-body">
           {this.renderAttachments()}

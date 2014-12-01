@@ -1,6 +1,6 @@
 require('../vendor/fuzzy-match');
 
-window.AttachmentMaker = {
+AttachmentMaker = {
   attachments: {},
   threads: [],
   create: function(data) {
