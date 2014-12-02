@@ -53,7 +53,7 @@ AttachmentMaker = {
     this.attachments[at][message.threadId] = this.attachments[at][message.threadId] || {};
     var from = message.payload.headers.filter(function(header) { return header.name === "From" })[0].value;
     this.attachments[at][message.threadId].messages = this.attachments[at][message.threadId].messages || {};
-    this.attachments[at][message.threadId].messages[from] = this.attachments[at][message.threadId].messages[from] || [];
+    this.attachments[at][message.threadId].messages[from] = this.attachments[at][message.threadId].messages[from] || {attachments: []};
     var data = {
       type: type,
       filename: part.filename,
@@ -75,11 +75,14 @@ AttachmentMaker = {
       return label === "UNREAD"
     })[0];
 
-    // this allows us to ask the thread if it has unread messages.
-    if(data.unread)
+    if(data.unread) {
+      // this allows us to ask the thread if it has unread messages.
       this.attachments[at][message.threadId].hasUnreadMessages = true;
+      // this allows us to ask there are unread messages from this user.
+      this.attachments[at][message.threadId].messages[from].hasUnreadMessages = true;
+    }
 
-    this.attachments[at][message.threadId].messages[from].push(data);
+    this.attachments[at][message.threadId].messages[from].attachments.push(data);
     return true
   },
   threadExists: function(threads, threadId) {
