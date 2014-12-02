@@ -17,7 +17,7 @@ var Cloudini = React.createClass({
     AttachmentStore.onChangeEvent(function() {
       if(this.isMounted()) this.setState({ attachments: AttachmentStore.attachments() })
     }.bind(this));
-    AttachmentStore.all();
+    AttachmentStore.fromCache();
   },
   render: function() {
     return (

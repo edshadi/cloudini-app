@@ -8,7 +8,7 @@ var SidebarHeader = React.createClass({
     return (
       <div id="sidebar-header">
         <div classNme="stream-name">File Stream: {this.props.fileStream}</div>
-        <Menu/>
+        <Menu viewSwitcher={this.props.viewSwitcher} />
       </div>
     );
   }

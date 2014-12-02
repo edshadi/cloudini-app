@@ -1,5 +1,7 @@
 /** @jsx React.DOM */
-var React = require('react');
+var React = require('react')
+    , Constants = require('../constants/cloudini-constants')
+    ;
 
 var Menu = React.createClass({
   getInitialState: function() {
@@ -20,8 +22,8 @@ var Menu = React.createClass({
           </ul>
           <hr/>
           <ul>
-            <li><a href="#">Unread Messages</a></li>
-            <li><a href="#">All Messages</a></li>
+            <li><a onClick={this.props.viewSwitcher} data-view={Constants.UNREAD_MESSAGES_VIEW} href="#">Unread Messages</a></li>
+            <li><a onClick={this.props.viewSwitcher} data-view={Constants.ALL_MESSAGES_VIEW} href="#">All Messages</a></li>
           </ul>
 
 

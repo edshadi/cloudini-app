@@ -1,6 +1,7 @@
 /** @jsx React.DOM */
 var React = require('react')
   , Thread = require('./thread.react')
+  , Constants = require('../constants/cloudini-constants')
   ;
 
 var Threads = React.createClass({
@@ -14,12 +15,16 @@ var Threads = React.createClass({
   renderThreads: function() {
     var threads = [];
     Object.keys(this.props.threads).forEach(function(id) {
-      var messages = this.props.threads[id].messages;
+      var thread = this.props.threads[id];
+      // we're only interested in unread messages, ignore thread if it has no unread messages
+      if(this.props.view === Constants.UNREAD_MESSAGES_VIEW && !thread.hasUnreadMessages) return;
+
+      var messages = thread.messages;
       var subject = {
-        text: this.props.threads[id].subject,
+        text: thread.subject,
         messageCount: Object.keys(messages).length
       }
-      threads.push(<Thread key={id} date={this.props.threads[id].date} subject={subject} attachments={messages} />)
+      threads.push(<Thread key={id} date={thread.date} subject={subject} attachments={messages} view={this.props.view} />)
     }.bind(this))
     return threads;
   }

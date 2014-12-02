@@ -21,7 +21,7 @@ var Thread = React.createClass({
         avatar: './images/avatar.jpeg',
         on: this.props.date
       }
-      messages.push(<Message key={sender} attachments={this.props.attachments[sender]} sender={senderObject} />)
+      messages.push(<Message key={sender} attachments={this.props.attachments[sender]} sender={senderObject} view={this.props.view} />)
     }.bind(this));
     return messages;
   }
