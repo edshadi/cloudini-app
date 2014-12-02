@@ -1,4 +1,4 @@
-{
+module.exports = {
   "circleci-invoice-DBC-Deploy-1-20141111.pdf": {
     "1499c40df2293a68": {
       "messages": {
@@ -883,7 +883,8 @@
         ]
       },
       "date": "Fri, 25 Jul 2014 08:57:20 -0700",
-      "subject": "Russian River Tubing on August 9th :D"
+      "subject": "Russian River Tubing on August 9th :D",
+      "hasUnreadMessages": true
     }
   },
   "Egypt JAM - Invitation - AR.pdf": {
@@ -905,7 +906,8 @@
         ]
       },
       "date": "Tue, 26 Aug 2014 11:26:17 -0700",
-      "subject": "Egypt Jam! Please help us with outreach!"
+      "subject": "Egypt Jam! Please help us with outreach!",
+      "hasUnreadMessages": true
     }
   },
   "Egypt JAM APPLICATION - AR.pdf": {
@@ -927,7 +929,8 @@
         ]
       },
       "date": "Tue, 26 Aug 2014 11:26:17 -0700",
-      "subject": "Egypt Jam! Please help us with outreach!"
+      "subject": "Egypt Jam! Please help us with outreach!",
+      "hasUnreadMessages": true
     }
   },
   "Egypt JAM APPLICATION - EN.pdf": {
@@ -949,7 +952,8 @@
         ]
       },
       "date": "Tue, 26 Aug 2014 11:26:17 -0700",
-      "subject": "Egypt Jam! Please help us with outreach!"
+      "subject": "Egypt Jam! Please help us with outreach!",
+      "hasUnreadMessages": true
     }
   },
   "Egypt JAM - Invitation - EN.pdf": {
@@ -971,7 +975,8 @@
         ]
       },
       "date": "Tue, 26 Aug 2014 11:26:17 -0700",
-      "subject": "Egypt Jam! Please help us with outreach!"
+      "subject": "Egypt Jam! Please help us with outreach!",
+      "hasUnreadMessages": true
     }
   },
   "github-edshadi-receipt-2014-07-17.pdf": {

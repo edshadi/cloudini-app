@@ -1,5 +1,4 @@
 require('../vendor/fuzzy-match');
-
 AttachmentMaker = {
   attachments: {},
   threads: [],
@@ -76,8 +75,9 @@ AttachmentMaker = {
       return label === "UNREAD"
     })[0];
 
-    // if(this.threadExists(this.attachments[at], message.threadId))
-    //   data.versions.push(data);
+    // this allows us to ask the thread if it has unread messages.
+    if(data.unread)
+      this.attachments[at][message.threadId].hasUnreadMessages = true;
 
     this.attachments[at][message.threadId].messages[from].push(data);
     return true
