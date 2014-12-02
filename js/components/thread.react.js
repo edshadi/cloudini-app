@@ -15,13 +15,13 @@ var Thread = React.createClass({
   },
   renderMessages: function() {
     var messages = [];
-    Object.keys(this.props.attachments).forEach(function(sender) {
+    Object.keys(this.props.messages).forEach(function(sender) {
       var senderObject = {
         name: sender,
         avatar: './images/avatar.jpeg',
         on: this.props.date
       }
-      messages.push(<Message key={sender} message={this.props.attachments[sender]} sender={senderObject} view={this.props.view} />)
+      messages.push(<Message key={sender} message={this.props.messages[sender]} sender={senderObject} view={this.props.view} />)
     }.bind(this));
     return messages;
   }

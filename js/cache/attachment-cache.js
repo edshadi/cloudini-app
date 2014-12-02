@@ -1,6 +1,7 @@
 module.exports = {
   "circleci-invoice-DBC-Deploy-1-20141111.pdf": {
     "1499c40df2293a68": {
+      "unreadMessageCount": 0,
       "messages": {
         "CircleCI Billing <billing@circleci.com>": {
           "attachments": [
@@ -15,7 +16,8 @@ module.exports = {
               "from": "CircleCI Billing <billing@circleci.com>",
               "subject": "Your CircleCI invoice - DBC-Deploy"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Tue, 11 Nov 2014 00:28:51 +0000 (UTC)",
@@ -24,6 +26,7 @@ module.exports = {
   },
   "OCNA Meeting Minutes October 6th, 2014.odt": {
     "14971cc258b74b34": {
+      "unreadMessageCount": 0,
       "messages": {
         "Oak Center Neighborhood Association <oakcenterna@gmail.com>": {
           "attachments": [
@@ -38,7 +41,8 @@ module.exports = {
               "subject": "OCNA Meeting Monday November 3rd 6:30-8:00 PM at DeFremery House-Meeting Meetings for October attached for review",
               "from": "Oak Center Neighborhood Association <oakcenterna@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sun, 2 Nov 2014 10:37:24 -0800",
@@ -47,6 +51,7 @@ module.exports = {
   },
   "TownPark1.jpg": {
     "14971cc258b74b34": {
+      "unreadMessageCount": 0,
       "messages": {
         "Oak Center Neighborhood Association <oakcenterna@gmail.com>": {
           "attachments": [
@@ -61,7 +66,8 @@ module.exports = {
               "subject": "OCNA Meeting Monday November 3rd 6:30-8:00 PM at DeFremery House-Meeting Meetings for October attached for review",
               "from": "Oak Center Neighborhood Association <oakcenterna@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sun, 2 Nov 2014 10:37:24 -0800",
@@ -70,6 +76,7 @@ module.exports = {
   },
   "Oak Cnt Agenda 110314.pdf": {
     "14977375be2f75ad": {
+      "unreadMessageCount": 0,
       "messages": {
         "Oak Center Neighborhood Association <oakcenterna@gmail.com>": {
           "attachments": [
@@ -84,7 +91,8 @@ module.exports = {
               "subject": "Agenda for Tonight's OCNA Meeting at 1651 Adeline Street (630-8 PM) - attacched",
               "from": "Oak Center Neighborhood Association <oakcenterna@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Mon, 3 Nov 2014 11:52:36 -0800",
@@ -93,6 +101,7 @@ module.exports = {
   },
   "OCNA_DMM_100614.docx": {
     "14977375be2f75ad": {
+      "unreadMessageCount": 0,
       "messages": {
         "Oak Center Neighborhood Association <oakcenterna@gmail.com>": {
           "attachments": [
@@ -107,7 +116,8 @@ module.exports = {
               "subject": "Agenda for Tonight's OCNA Meeting at 1651 Adeline Street (630-8 PM) - attacched",
               "from": "Oak Center Neighborhood Association <oakcenterna@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Mon, 3 Nov 2014 11:52:36 -0800",
@@ -116,6 +126,7 @@ module.exports = {
   },
   "20141117_SHADI_4ID4TO.pdf": {
     "149aad839dbc44a1": {
+      "unreadMessageCount": 0,
       "messages": {
         "Lufthansa <online@booking-lufthansa.com>": {
           "attachments": [
@@ -130,13 +141,15 @@ module.exports = {
               "subject": "Travel Information, Departure 17-November-2014; 4ID4TO",
               "date": "Thu, 13 Nov 2014 21:28:55 +0100"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Thu, 13 Nov 2014 21:28:55 +0100",
       "subject": "Travel Information, Departure 17-November-2014; 4ID4TO"
     },
     "149aade61901e195": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Lufthansa.com\" <online@booking-lufthansa.com>": {
           "attachments": [
@@ -151,7 +164,8 @@ module.exports = {
               "subject": "Your ticket details & travel information | 17 November 2014 | Reservation code: 4ID4TO",
               "date": "Thu, 13 Nov 2014 21:35:35 +0100"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Thu, 13 Nov 2014 21:35:35 +0100",
@@ -160,6 +174,7 @@ module.exports = {
   },
   "Form_APIS_USA_4ID4TO.pdf": {
     "149aad839dbc44a1": {
+      "unreadMessageCount": 0,
       "messages": {
         "Lufthansa <online@booking-lufthansa.com>": {
           "attachments": [
@@ -174,7 +189,8 @@ module.exports = {
               "subject": "Travel Information, Departure 17-November-2014; 4ID4TO",
               "date": "Thu, 13 Nov 2014 21:28:55 +0100"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Thu, 13 Nov 2014 21:28:55 +0100",
@@ -183,6 +199,7 @@ module.exports = {
   },
   "ATT Notice.pdf": {
     "149432b7222bf168": {
+      "unreadMessageCount": 0,
       "messages": {
         "Oak Center Neighborhood Association <oakcenterna@gmail.com>": {
           "attachments": [
@@ -197,7 +214,8 @@ module.exports = {
               "subject": "Fwd: Proposed Cell Towers on roof of Taylor Church",
               "from": "Oak Center Neighborhood Association <oakcenterna@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 24 Oct 2014 10:19:21 -0700",
@@ -206,6 +224,7 @@ module.exports = {
   },
   "Amber 669 profile.pdf": {
     "1498ba6df87b9ec7": {
+      "unreadMessageCount": 0,
       "messages": {
         "Reham Shadi <rehamshadi@gmail.com>": {
           "attachments": [
@@ -220,7 +239,8 @@ module.exports = {
               "subject": "Re: Treatment Fees",
               "from": "Reham Shadi <rehamshadi@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 7 Nov 2014 11:06:49 -0800",
@@ -229,6 +249,7 @@ module.exports = {
   },
   "emailreceipt_20141016R4145586412.pdf": {
     "1491b59786b3f968": {
+      "unreadMessageCount": 0,
       "messages": {
         "4thstreet@apple.com": {
           "attachments": [
@@ -243,7 +264,8 @@ module.exports = {
               "from": "4thstreet@apple.com",
               "subject": "Your receipt from Apple Store, 4th Street"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Thu, 16 Oct 2014 23:42:47 +0000 (GMT+00:00)",
@@ -252,6 +274,7 @@ module.exports = {
   },
   "emailreceipt_20141016R4144180691.pdf": {
     "1491b59786b3f968": {
+      "unreadMessageCount": 0,
       "messages": {
         "4thstreet@apple.com": {
           "attachments": [
@@ -266,7 +289,8 @@ module.exports = {
               "from": "4thstreet@apple.com",
               "subject": "Your receipt from Apple Store, 4th Street"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Thu, 16 Oct 2014 23:53:45 +0000 (GMT+00:00)",
@@ -275,6 +299,7 @@ module.exports = {
   },
   "TaxDocument.pdf": {
     "149004c55eac63f2": {
+      "unreadMessageCount": 0,
       "messages": {
         "Reham Shadi <rehamshadi@gmail.com>": {
           "attachments": [
@@ -289,7 +314,8 @@ module.exports = {
               "subject": "student loan",
               "from": "Reham Shadi <rehamshadi@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sat, 11 Oct 2014 10:40:42 -0700",
@@ -298,6 +324,7 @@ module.exports = {
   },
   "AAA-TIPCL-2014-0082156-OE189D-Ed Shadi-EN.pdf": {
     "1494899fc15a4260": {
+      "unreadMessageCount": 0,
       "messages": {
         "<donotreply@tuneinsurance.com>": {
           "attachments": [
@@ -312,7 +339,8 @@ module.exports = {
               "date": "Sun, 26 Oct 2014 02:40:46 +0800",
               "subject": "Tune Insure AirAsia Travel Protection (Booking no: OE189D )"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sun, 26 Oct 2014 02:40:46 +0800",
@@ -321,6 +349,7 @@ module.exports = {
   },
   "AAA-TIPCL-2014-0082156-OE189D-Reham  Shady-EN.pdf": {
     "1494899fc15a4260": {
+      "unreadMessageCount": 0,
       "messages": {
         "<donotreply@tuneinsurance.com>": {
           "attachments": [
@@ -335,7 +364,8 @@ module.exports = {
               "date": "Sun, 26 Oct 2014 02:40:49 +0800",
               "subject": "Tune Insure AirAsia Travel Protection (Booking no: OE189D )"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sun, 26 Oct 2014 02:40:49 +0800",
@@ -344,6 +374,7 @@ module.exports = {
   },
   "AAA-TIPCL-2014-0082132-A9N26M-Ed Shadi-EN.pdf": {
     "149489a6e822537a": {
+      "unreadMessageCount": 0,
       "messages": {
         "<donotreply@tuneinsurance.com>": {
           "attachments": [
@@ -358,7 +389,8 @@ module.exports = {
               "date": "Sun, 26 Oct 2014 02:41:09 +0800",
               "subject": "Tune Insure AirAsia Travel Protection (Booking no: A9N26M )"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sun, 26 Oct 2014 02:41:09 +0800",
@@ -367,6 +399,7 @@ module.exports = {
   },
   "AAA-TIPCL-2014-0082132-A9N26M-Reham  Shady-EN.pdf": {
     "149489a6e822537a": {
+      "unreadMessageCount": 0,
       "messages": {
         "<donotreply@tuneinsurance.com>": {
           "attachments": [
@@ -381,7 +414,8 @@ module.exports = {
               "date": "Sun, 26 Oct 2014 02:41:12 +0800",
               "subject": "Tune Insure AirAsia Travel Protection (Booking no: A9N26M )"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sun, 26 Oct 2014 02:41:12 +0800",
@@ -390,6 +424,7 @@ module.exports = {
   },
   "Booking-Details-WTB15A8DC.pdf": {
     "14944752d947ad65": {
+      "unreadMessageCount": 0,
       "messages": {
         "noreply-3849@freetobook.com": {
           "attachments": [
@@ -404,7 +439,8 @@ module.exports = {
               "from": "noreply-3849@freetobook.com",
               "date": "Sat, 25 Oct 2014 00:19:29 +0100 (BST)"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sat, 25 Oct 2014 00:19:29 +0100 (BST)",
@@ -413,6 +449,7 @@ module.exports = {
   },
   "SHADI 2013.pdf": {
     "1490f6465592b760": {
+      "unreadMessageCount": 0,
       "messages": {
         "Linda Liebschutz <linda@ztaxman.com>": {
           "attachments": [
@@ -427,7 +464,8 @@ module.exports = {
               "subject": "",
               "date": "Tue, 14 Oct 2014 16:01:10 +0000"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Tue, 14 Oct 2014 16:01:10 +0000",
@@ -436,6 +474,7 @@ module.exports = {
   },
   "PRINT THIS - FILING DOCUMENTS!!!.pdf": {
     "1490f6465592b760": {
+      "unreadMessageCount": 0,
       "messages": {
         "Linda Liebschutz <linda@ztaxman.com>": {
           "attachments": [
@@ -450,7 +489,8 @@ module.exports = {
               "subject": "",
               "date": "Tue, 14 Oct 2014 16:01:10 +0000"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Tue, 14 Oct 2014 16:01:10 +0000",
@@ -459,6 +499,7 @@ module.exports = {
   },
   "authorization.pdf": {
     "1490f6465592b760": {
+      "unreadMessageCount": 0,
       "messages": {
         "Ed Shadi <edshadi@gmail.com>": {
           "attachments": [
@@ -473,7 +514,8 @@ module.exports = {
               "from": "Ed Shadi <edshadi@gmail.com>",
               "subject": "Re:"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Tue, 14 Oct 2014 10:38:42 -0700",
@@ -482,6 +524,7 @@ module.exports = {
   },
   "emailreceipt_20141012R0575472139.pdf": {
     "149065c61cc7feac": {
+      "unreadMessageCount": 0,
       "messages": {
         "baystreet@apple.com": {
           "attachments": [
@@ -496,7 +539,8 @@ module.exports = {
               "from": "baystreet@apple.com",
               "subject": "Your receipt from Apple Store, Bay Street"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sun, 12 Oct 2014 21:55:56 +0000 (GMT+00:00)",
@@ -505,6 +549,7 @@ module.exports = {
   },
   "emailreceipt_20141012R0575472140.pdf": {
     "149065c61cc7feac": {
+      "unreadMessageCount": 0,
       "messages": {
         "baystreet@apple.com": {
           "attachments": [
@@ -519,7 +564,8 @@ module.exports = {
               "from": "baystreet@apple.com",
               "subject": "Your receipt from Apple Store, Bay Street"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sun, 12 Oct 2014 21:58:54 +0000 (GMT+00:00)",
@@ -528,6 +574,7 @@ module.exports = {
   },
   "invite.ics": {
     "148f61fdc6271aab": {
+      "unreadMessageCount": 0,
       "messages": {
         "Jeffrey Wescott <jeffrey.wescott@gmail.com>": {
           "attachments": [
@@ -542,13 +589,15 @@ module.exports = {
               "from": "Jeffrey Wescott <jeffrey.wescott@gmail.com>",
               "subject": "Updated: Lunch: Shadi / Jeffrey - Tue, Oct 14 @ 12:30pm (PDT)"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Thu, 09 Oct 2014 18:15:48 GMT",
       "subject": "Updated: Lunch: Shadi / Jeffrey - Tue, Oct 14 @ 12:30pm (PDT)"
     },
     "148f5e6d65ca66ff": {
+      "unreadMessageCount": 0,
       "messages": {
         "Jeffrey Wescott <jeffrey.wescott@gmail.com>": {
           "attachments": [
@@ -563,13 +612,15 @@ module.exports = {
               "from": "Jeffrey Wescott <jeffrey.wescott@gmail.com>",
               "subject": "Updated: Lunch: Shadi / Jeffrey - Thu, Oct 09 @ 12:30pm (PDT)"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Thu, 09 Oct 2014 17:13:36 GMT",
       "subject": "Updated: Lunch: Shadi / Jeffrey - Thu, Oct 09 @ 12:30pm (PDT)"
     },
     "1487ad8ee61682e3": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"emilio.arias@ext.uber.com\" <emilio.arias@ext.uber.com>": {
           "attachments": [
@@ -584,13 +635,15 @@ module.exports = {
               "subject": "Updated Invitation: Uber Conversation @ Fri Sep 19, 2014 10am - 10:30am (ed shadi)",
               "from": "\"emilio.arias@ext.uber.com\" <emilio.arias@ext.uber.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Mon, 15 Sep 2014 19:45:09 +0000",
       "subject": "Updated Invitation: Uber Conversation @ Fri Sep 19, 2014 10am - 10:30am (ed shadi)"
     },
     "1487a9509b231ec1": {
+      "unreadMessageCount": 0,
       "messages": {
         "Emilio Arias <emilio.arias@ext.uber.com>": {
           "attachments": [
@@ -605,7 +658,8 @@ module.exports = {
               "subject": "Invitation: Uber Conversation @ Fri Sep 19, 2014 10am - 10:30am (ed shadi)",
               "from": "Emilio Arias <emilio.arias@ext.uber.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Mon, 15 Sep 2014 18:31:00 +0000",
@@ -614,6 +668,7 @@ module.exports = {
   },
   "MinutesOCNA090814.docx": {
     "148e6af327783f7d": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -628,13 +683,15 @@ module.exports = {
               "subject": "OCNA Monthly Meeting Tonight 6:30 to 8 PM - Moved to Senior Center!! Agenda Attached",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Mon, 6 Oct 2014 11:18:34 -0700",
       "subject": "OCNA Monthly Meeting Tonight 6:30 to 8 PM - Moved to Senior Center!! Agenda Attached"
     },
     "148d3e89ea14ce46": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -649,7 +706,8 @@ module.exports = {
               "subject": "Next OCNA Meeting is October 6 at DeFremery House 6:30 to 8 PM",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Thu, 2 Oct 2014 19:48:30 -0700",
@@ -658,6 +716,7 @@ module.exports = {
   },
   "Oak Cnt Agenda 100614.doc": {
     "148e6af327783f7d": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -672,7 +731,8 @@ module.exports = {
               "subject": "OCNA Monthly Meeting Tonight 6:30 to 8 PM - Moved to Senior Center!! Agenda Attached",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Mon, 6 Oct 2014 11:18:34 -0700",
@@ -681,6 +741,7 @@ module.exports = {
   },
   "github-edshadi-receipt-2014-09-17.pdf": {
     "14884f724b2cce39": {
+      "unreadMessageCount": 0,
       "messages": {
         "GitHub <support@github.com>": {
           "attachments": [
@@ -695,7 +756,8 @@ module.exports = {
               "from": "GitHub <support@github.com>",
               "subject": "[GitHub] Payment Receipt"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Wed, 17 Sep 2014 11:54:22 -0700",
@@ -704,6 +766,7 @@ module.exports = {
   },
   "13784655275-362620691-ticket.pdf": {
     "14943ddc5469c92f": {
+      "unreadMessageCount": 0,
       "messages": {
         "Oak Center Neighborhood Association <oakcenterna@gmail.com>": {
           "attachments": [
@@ -718,7 +781,8 @@ module.exports = {
               "subject": "Reminder for 2014 State of the District (Oakland District 3 Town Hall)",
               "from": "Oak Center Neighborhood Association <oakcenterna@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 24 Oct 2014 13:34:07 -0700",
@@ -727,6 +791,7 @@ module.exports = {
   },
   "Notice_Overbooking_of_flights.pdf": {
     "149aade61901e195": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Lufthansa.com\" <online@booking-lufthansa.com>": {
           "attachments": [
@@ -741,7 +806,8 @@ module.exports = {
               "subject": "Your ticket details & travel information | 17 November 2014 | Reservation code: 4ID4TO",
               "date": "Thu, 13 Nov 2014 21:35:35 +0100"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Thu, 13 Nov 2014 21:35:35 +0100",
@@ -750,6 +816,7 @@ module.exports = {
   },
   "Oak Cnt Agenda 090814.pdf": {
     "14857b1a418bf9fc": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -764,7 +831,8 @@ module.exports = {
               "subject": "OCNA Monthly Meeting Agenda-attached plus Reminder for 9/11/14 WOJLOO Mayoral Forum at West Oakland Senior Center",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Mon, 8 Sep 2014 16:55:32 -0700",
@@ -773,6 +841,7 @@ module.exports = {
   },
   "OCNA Meeting Notes August 4th, 2014.docx": {
     "1483c1e00cf426ed": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -787,7 +856,8 @@ module.exports = {
               "subject": "OCNA Monthly Meeting - Monday September 8 at DeFremery House",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Wed, 3 Sep 2014 08:24:32 -0700",
@@ -796,6 +866,7 @@ module.exports = {
   },
   "OCNA Meeting Notes July 7th, 2014.docx": {
     "1483c1e00cf426ed": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -810,7 +881,8 @@ module.exports = {
               "subject": "OCNA Monthly Meeting - Monday September 8 at DeFremery House",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Wed, 3 Sep 2014 08:24:32 -0700",
@@ -819,6 +891,7 @@ module.exports = {
   },
   "emailreceipt_20141004R4145030404.pdf": {
     "148dd81d3e866bd8": {
+      "unreadMessageCount": 0,
       "messages": {
         "4thstreet@apple.com": {
           "attachments": [
@@ -833,7 +906,8 @@ module.exports = {
               "from": "4thstreet@apple.com",
               "subject": "Your receipt from Apple Store, 4th Street"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sat, 04 Oct 2014 23:30:24 +0000 (GMT+00:00)",
@@ -842,6 +916,7 @@ module.exports = {
   },
   "20140828_181053.jpg": {
     "1485c2aa72699207": {
+      "unreadMessageCount": 0,
       "messages": {
         "Karim Mantawi <karimelmantawi@gmail.com>": {
           "attachments": [
@@ -856,7 +931,8 @@ module.exports = {
               "subject": "Baaasha",
               "from": "Karim Mantawi <karimelmantawi@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Tue, 9 Sep 2014 13:46:11 -0700",
@@ -865,6 +941,7 @@ module.exports = {
   },
   "image.jpeg": {
     "1488e6f0fd6a5680": {
+      "unreadMessageCount": 0,
       "messages": {
         "Muhab Wahby <muhab.wahby@gmail.com>": {
           "attachments": [
@@ -890,7 +967,8 @@ module.exports = {
               "subject": "Re: طه",
               "from": "Muhab Wahby <muhab.wahby@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         },
         "ed shadi <edshadi@gmail.com>": {
           "attachments": [
@@ -905,7 +983,8 @@ module.exports = {
               "subject": "Re: طه",
               "from": "ed shadi <edshadi@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         },
         "Karim Bishay <karim.bishay@gmail.com>": {
           "attachments": [
@@ -920,13 +999,15 @@ module.exports = {
               "subject": "Re: طه",
               "from": "Karim Bishay <karim.bishay@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 19 Sep 2014 17:02:06 +0100",
       "subject": "Re: طه"
     },
     "147a7cf7b5aa2373": {
+      "unreadMessageCount": 0,
       "messages": {
         "Mostafa Shady <mshadi@icloud.com>": {
           "attachments": [
@@ -941,7 +1022,8 @@ module.exports = {
               "subject": "see the resemblance",
               "date": "Tue, 05 Aug 2014 23:12:58 +0300"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Tue, 05 Aug 2014 23:12:58 +0300",
@@ -950,6 +1032,7 @@ module.exports = {
   },
   "e592367444213080.ics": {
     "1476e3df699415af": {
+      "unreadMessageCount": 1,
       "messages": {
         "jared grippe <jared@deadlyicon.com>": {
           "attachments": [
@@ -966,16 +1049,16 @@ module.exports = {
               "unread": "UNREAD"
             }
           ],
-          "hasUnreadMessages": true
+          "unreadMessageCount": 1
         }
       },
       "date": "Fri, 25 Jul 2014 08:57:20 -0700",
-      "subject": "Russian River Tubing on August 9th :D",
-      "hasUnreadMessages": true
+      "subject": "Russian River Tubing on August 9th :D"
     }
   },
   "Egypt JAM - Invitation - AR.pdf": {
     "14813919b7477985": {
+      "unreadMessageCount": 1,
       "messages": {
         "Shilpa Jain <shilpaminajain@yahoo.com>": {
           "attachments": [
@@ -992,16 +1075,16 @@ module.exports = {
               "unread": "UNREAD"
             }
           ],
-          "hasUnreadMessages": true
+          "unreadMessageCount": 1
         }
       },
       "date": "Tue, 26 Aug 2014 11:26:17 -0700",
-      "subject": "Egypt Jam! Please help us with outreach!",
-      "hasUnreadMessages": true
+      "subject": "Egypt Jam! Please help us with outreach!"
     }
   },
   "Egypt JAM APPLICATION - AR.pdf": {
     "14813919b7477985": {
+      "unreadMessageCount": 1,
       "messages": {
         "Shilpa Jain <shilpaminajain@yahoo.com>": {
           "attachments": [
@@ -1018,16 +1101,16 @@ module.exports = {
               "unread": "UNREAD"
             }
           ],
-          "hasUnreadMessages": true
+          "unreadMessageCount": 1
         }
       },
       "date": "Tue, 26 Aug 2014 11:26:17 -0700",
-      "subject": "Egypt Jam! Please help us with outreach!",
-      "hasUnreadMessages": true
+      "subject": "Egypt Jam! Please help us with outreach!"
     }
   },
   "Egypt JAM APPLICATION - EN.pdf": {
     "14813919b7477985": {
+      "unreadMessageCount": 1,
       "messages": {
         "Shilpa Jain <shilpaminajain@yahoo.com>": {
           "attachments": [
@@ -1044,16 +1127,16 @@ module.exports = {
               "unread": "UNREAD"
             }
           ],
-          "hasUnreadMessages": true
+          "unreadMessageCount": 1
         }
       },
       "date": "Tue, 26 Aug 2014 11:26:17 -0700",
-      "subject": "Egypt Jam! Please help us with outreach!",
-      "hasUnreadMessages": true
+      "subject": "Egypt Jam! Please help us with outreach!"
     }
   },
   "Egypt JAM - Invitation - EN.pdf": {
     "14813919b7477985": {
+      "unreadMessageCount": 1,
       "messages": {
         "Shilpa Jain <shilpaminajain@yahoo.com>": {
           "attachments": [
@@ -1070,16 +1153,16 @@ module.exports = {
               "unread": "UNREAD"
             }
           ],
-          "hasUnreadMessages": true
+          "unreadMessageCount": 1
         }
       },
       "date": "Tue, 26 Aug 2014 11:26:17 -0700",
-      "subject": "Egypt Jam! Please help us with outreach!",
-      "hasUnreadMessages": true
+      "subject": "Egypt Jam! Please help us with outreach!"
     }
   },
   "github-edshadi-receipt-2014-07-17.pdf": {
     "14745a31c040ad4b": {
+      "unreadMessageCount": 0,
       "messages": {
         "GitHub <support@github.com>": {
           "attachments": [
@@ -1094,7 +1177,8 @@ module.exports = {
               "from": "GitHub <support@github.com>",
               "subject": "[GitHub] Payment Receipt"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Thu, 17 Jul 2014 11:43:43 -0700",
@@ -1103,6 +1187,7 @@ module.exports = {
   },
   "AgendaBeat 2X 5XNCPC SEP 2014.doc": {
     "14841ecbba8d5489": {
+      "unreadMessageCount": 0,
       "messages": {
         "JoAnn Hollis <jah06@sbcglobal.net>": {
           "attachments": [
@@ -1117,7 +1202,8 @@ module.exports = {
               "from": "JoAnn Hollis <jah06@sbcglobal.net>",
               "subject": "Fw: Beat 2X 5X NCPC Meeting Thursday, September 4, 2014,   6:30 P.M."
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Thu, 4 Sep 2014 11:28:25 -0700",
@@ -1126,6 +1212,7 @@ module.exports = {
   },
   "Oak Cnt Agenda 080414.pdf": {
     "147a38cf6f2d1df8": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -1140,7 +1227,8 @@ module.exports = {
               "subject": "Agenda for 8/4/14 OCNA Meeting attached",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Mon, 4 Aug 2014 17:23:50 -0700",
@@ -1149,6 +1237,7 @@ module.exports = {
   },
   "YardSaleFlyer2014.doc": {
     "1480e918374b73eb": {
+      "unreadMessageCount": 0,
       "messages": {
         "JoAnn Hollis <jah06@sbcglobal.net>": {
           "attachments": [
@@ -1163,7 +1252,8 @@ module.exports = {
               "from": "JoAnn Hollis <jah06@sbcglobal.net>",
               "subject": "Draft flyer and information"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Mon, 25 Aug 2014 12:08:08 -0700",
@@ -1172,6 +1262,7 @@ module.exports = {
   },
   "gus-at-yuba.jpg": {
     "148668a73901124d": {
+      "unreadMessageCount": 0,
       "messages": {
         "Emilio Arias <emilio.arias@ext.uber.com>": {
           "attachments": [
@@ -1186,7 +1277,8 @@ module.exports = {
               "date": "Mon, 15 Sep 2014 14:58:01 -0700",
               "subject": "Re: Uber Opportunties"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Mon, 15 Sep 2014 14:58:01 -0700",
@@ -1195,6 +1287,7 @@ module.exports = {
   },
   "image001.jpg": {
     "147d5fc4dfdce473": {
+      "unreadMessageCount": 0,
       "messages": {
         "<Julian.Caspari@international.gc.ca>": {
           "attachments": [
@@ -1220,7 +1313,8 @@ module.exports = {
               "subject": "RE: Dev Boot Camp + Ontario, Canada",
               "date": "Mon, 8 Sep 2014 17:46:06 +0000"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         },
         "ed shadi <edshadi@gmail.com>": {
           "attachments": [
@@ -1246,13 +1340,15 @@ module.exports = {
               "subject": "Re: Dev Boot Camp + Ontario, Canada",
               "from": "ed shadi <edshadi@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Mon, 22 Sep 2014 08:17:08 -0700",
       "subject": "Re: Dev Boot Camp + Ontario, Canada"
     },
     "14793ce51a3f4e18": {
+      "unreadMessageCount": 1,
       "messages": {
         "<Julian.Caspari@international.gc.ca>": {
           "attachments": [
@@ -1267,7 +1363,8 @@ module.exports = {
               "subject": "Dev Bootcamp",
               "date": "Fri, 1 Aug 2014 23:00:40 +0000"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         },
         "Neal Sinno <neal@optimatic.com>": {
           "attachments": [
@@ -1280,9 +1377,11 @@ module.exports = {
               "versions": [],
               "from": "Neal Sinno <neal@optimatic.com>",
               "subject": "Re: Dev Bootcamp",
-              "date": "Mon, 4 Aug 2014 20:00:39 +0000"
+              "date": "Mon, 4 Aug 2014 20:00:39 +0000",
+              "unread": "UNREAD"
             }
-          ]
+          ],
+          "unreadMessageCount": 1
         }
       },
       "date": "Mon, 4 Aug 2014 20:00:39 +0000",
@@ -1291,6 +1390,7 @@ module.exports = {
   },
   "image008.png": {
     "148c713ec9521924": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -1305,7 +1405,8 @@ module.exports = {
               "subject": "Fwd: FW: NCPC meeting at MORH 1 for October",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Tue, 30 Sep 2014 08:00:44 -0700",
@@ -1314,6 +1415,7 @@ module.exports = {
   },
   "image010.png": {
     "148c713ec9521924": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -1328,7 +1430,8 @@ module.exports = {
               "subject": "Fwd: FW: NCPC meeting at MORH 1 for October",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Tue, 30 Sep 2014 08:00:44 -0700",
@@ -1337,6 +1440,7 @@ module.exports = {
   },
   "image004.png": {
     "148c713ec9521924": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -1351,7 +1455,8 @@ module.exports = {
               "subject": "Fwd: FW: NCPC meeting at MORH 1 for October",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Tue, 30 Sep 2014 08:00:44 -0700",
@@ -1360,6 +1465,7 @@ module.exports = {
   },
   "image012.jpg": {
     "148c713ec9521924": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -1374,7 +1480,8 @@ module.exports = {
               "subject": "Fwd: FW: NCPC meeting at MORH 1 for October",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Tue, 30 Sep 2014 08:00:44 -0700",
@@ -1383,6 +1490,7 @@ module.exports = {
   },
   "image002.jpg": {
     "148c713ec9521924": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -1397,7 +1505,8 @@ module.exports = {
               "subject": "Fwd: FW: NCPC meeting at MORH 1 for October",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Tue, 30 Sep 2014 08:00:44 -0700",
@@ -1406,6 +1515,7 @@ module.exports = {
   },
   "image006.jpg": {
     "148c713ec9521924": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -1420,7 +1530,8 @@ module.exports = {
               "subject": "Fwd: FW: NCPC meeting at MORH 1 for October",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Tue, 30 Sep 2014 08:00:44 -0700",
@@ -1429,6 +1540,7 @@ module.exports = {
   },
   "image014.png": {
     "148c713ec9521924": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -1443,7 +1555,8 @@ module.exports = {
               "subject": "Fwd: FW: NCPC meeting at MORH 1 for October",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Tue, 30 Sep 2014 08:00:44 -0700",
@@ -1452,6 +1565,7 @@ module.exports = {
   },
   "Trucking.docx": {
     "1480ee8816be0d71": {
+      "unreadMessageCount": 1,
       "messages": {
         "A Shadi <shawadi@me.com>": {
           "attachments": [
@@ -1468,7 +1582,7 @@ module.exports = {
               "unread": "UNREAD"
             }
           ],
-          "hasUnreadMessages": true
+          "unreadMessageCount": 1
         },
         "ed shadi <edshadi@gmail.com>": {
           "attachments": [
@@ -1483,16 +1597,17 @@ module.exports = {
               "subject": "Fwd: Final Draft",
               "from": "ed shadi <edshadi@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Thu, 28 Aug 2014 17:44:27 -0700",
-      "subject": "Fwd: Final Draft",
-      "hasUnreadMessages": true
+      "subject": "Fwd: Final Draft"
     }
   },
   "github-edshadi-receipt-2014-08-17.pdf": {
     "147e551a3d508787": {
+      "unreadMessageCount": 0,
       "messages": {
         "GitHub <support@github.com>": {
           "attachments": [
@@ -1507,7 +1622,8 @@ module.exports = {
               "from": "GitHub <support@github.com>",
               "subject": "[GitHub] Payment Receipt"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sun, 17 Aug 2014 11:53:58 -0700",
@@ -1516,6 +1632,7 @@ module.exports = {
   },
   "Oak Cnt Agenda 070714.doc": {
     "147132f2b150c47a": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -1530,7 +1647,8 @@ module.exports = {
               "subject": "Agenda for Tonight's (7/7) Oak Center Neighborhood Association Meeting-attached",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Mon, 7 Jul 2014 16:36:04 -0700",
@@ -1539,6 +1657,7 @@ module.exports = {
   },
   "cloudini-cloudini-03136e7a2f7e-2.rar": {
     "147407647422a8c3": {
+      "unreadMessageCount": 0,
       "messages": {
         "Amir Khella <akhella@gmail.com>": {
           "attachments": [
@@ -1553,7 +1672,8 @@ module.exports = {
               "from": "Amir Khella <akhella@gmail.com>",
               "subject": "Re: google script access?"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 18 Jul 2014 14:13:54 -0700",
@@ -1562,6 +1682,7 @@ module.exports = {
   },
   "4214854624_1.pdf": {
     "147a8687c292baa0": {
+      "unreadMessageCount": 0,
       "messages": {
         "Reham Shadi <rehamshadi@gmail.com>": {
           "attachments": [
@@ -1576,7 +1697,8 @@ module.exports = {
               "subject": "insurance",
               "from": "Reham Shadi <rehamshadi@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Tue, 5 Aug 2014 16:02:05 -0700",
@@ -1585,6 +1707,7 @@ module.exports = {
   },
   "Trucking.pdf": {
     "1481221e70fd4793": {
+      "unreadMessageCount": 0,
       "messages": {
         "A Shadi <shawadi@me.com>": {
           "attachments": [
@@ -1599,7 +1722,8 @@ module.exports = {
               "subject": "Trucks - Final Draft",
               "date": "Tue, 26 Aug 2014 07:39:33 -0400"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         },
         "ed shadi <edshadi@gmail.com>": {
           "attachments": [
@@ -1625,7 +1749,8 @@ module.exports = {
               "subject": "Fwd: Trucks - Final Draft",
               "from": "ed shadi <edshadi@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sun, 31 Aug 2014 10:03:09 -0700",
@@ -1634,6 +1759,7 @@ module.exports = {
   },
   "2012 organizer.pdf": {
     "14900057a08daa68": {
+      "unreadMessageCount": 0,
       "messages": {
         "Linda Liebschutz <linda@ztaxman.com>": {
           "attachments": [
@@ -1648,7 +1774,8 @@ module.exports = {
               "subject": "Your taxes from Linda at Stern & Associates",
               "date": "Sat, 11 Oct 2014 16:23:12 +0000"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sat, 11 Oct 2014 16:23:12 +0000",
@@ -1657,6 +1784,7 @@ module.exports = {
   },
   "Tax Workbook.pdf": {
     "14900057a08daa68": {
+      "unreadMessageCount": 0,
       "messages": {
         "Linda Liebschutz <linda@ztaxman.com>": {
           "attachments": [
@@ -1671,7 +1799,8 @@ module.exports = {
               "subject": "Your taxes from Linda at Stern & Associates",
               "date": "Sat, 11 Oct 2014 16:23:12 +0000"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         },
         "Ed Shadi <edshadi@gmail.com>": {
           "attachments": [
@@ -1686,7 +1815,8 @@ module.exports = {
               "from": "Ed Shadi <edshadi@gmail.com>",
               "subject": "RE: Your taxes from Linda at Stern & Associates"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sat, 11 Oct 2014 16:17:13 -0700",
@@ -1695,6 +1825,7 @@ module.exports = {
   },
   "Tax Workbook.xls": {
     "14900057a08daa68": {
+      "unreadMessageCount": 0,
       "messages": {
         "Linda Liebschutz <linda@ztaxman.com>": {
           "attachments": [
@@ -1709,7 +1840,8 @@ module.exports = {
               "subject": "Your taxes from Linda at Stern & Associates",
               "date": "Sat, 11 Oct 2014 16:23:12 +0000"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sat, 11 Oct 2014 16:23:12 +0000",
@@ -1718,6 +1850,7 @@ module.exports = {
   },
   "emailreceipt_20140625R4145764648.pdf": {
     "146d585dd0e6b569": {
+      "unreadMessageCount": 0,
       "messages": {
         "4thstreet@apple.com": {
           "attachments": [
@@ -1732,7 +1865,8 @@ module.exports = {
               "from": "4thstreet@apple.com",
               "subject": "Your receipt from Apple Store, 4th Street"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Thu, 26 Jun 2014 00:14:17 +0000 (GMT+00:00)",
@@ -1741,6 +1875,7 @@ module.exports = {
   },
   "Service_Appointment.vcs": {
     "146d3e2eac1266ec": {
+      "unreadMessageCount": 0,
       "messages": {
         "service@bmwsf.com": {
           "attachments": [
@@ -1755,13 +1890,15 @@ module.exports = {
               "from": "service@bmwsf.com",
               "subject": "Appointment Scheduled: New BMW OF SAN FRANCISCO appointment on 06/28/2014 11:30 AM"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Wed, 25 Jun 2014 09:36:39 -0700 (PDT)",
       "subject": "Appointment Scheduled: New BMW OF SAN FRANCISCO appointment on 06/28/2014 11:30 AM"
     },
     "146de8575d3dc25b": {
+      "unreadMessageCount": 0,
       "messages": {
         "service@bmwsf.com": {
           "attachments": [
@@ -1776,7 +1913,8 @@ module.exports = {
               "from": "service@bmwsf.com",
               "subject": "Reminder - Service Appt on 06/28/2014 11:30 AM with BMW OF SAN FRANCISCO"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 27 Jun 2014 11:10:24 -0700 (PDT)",
@@ -1785,6 +1923,7 @@ module.exports = {
   },
   "IMG_4617.JPG": {
     "14885790fd7bff5f": {
+      "unreadMessageCount": 0,
       "messages": {
         "Karim Bishay <karim.bishay@gmail.com>": {
           "attachments": [
@@ -1799,7 +1938,8 @@ module.exports = {
               "subject": "Re: You have the high bid for Sale lot # 71QSCI14423003",
               "from": "Karim Bishay <karim.bishay@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Thu, 18 Sep 2014 12:22:21 -0700",
@@ -1808,6 +1948,7 @@ module.exports = {
   },
   "IMG_20141010_115050452.jpg": {
     "148b64f3bc10eab5": {
+      "unreadMessageCount": 0,
       "messages": {
         "ed shadi <edshadi@gmail.com>": {
           "attachments": [
@@ -1822,7 +1963,8 @@ module.exports = {
               "subject": "Re: Purchaser's Receipt to Bidder for Sale/Lot 71QSCI14423/003 - Register No P7416934",
               "from": "ed shadi <edshadi@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         },
         "Karim Bishay <karim.bishay@gmail.com>": {
           "attachments": [
@@ -1837,7 +1979,8 @@ module.exports = {
               "subject": "Re: Purchaser's Receipt to Bidder for Sale/Lot 71QSCI14423/003 - Register No P7416934",
               "from": "Karim Bishay <karim.bishay@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sun, 12 Oct 2014 20:57:27 -0700",
@@ -1846,6 +1989,7 @@ module.exports = {
   },
   "1382055609957_1.png": {
     "146df0fa324bde48": {
+      "unreadMessageCount": 0,
       "messages": {
         "Ed Shadi <shadi@devbootcamp.com>": {
           "attachments": [
@@ -1860,7 +2004,8 @@ module.exports = {
               "from": "Ed Shadi <shadi@devbootcamp.com>",
               "subject": "attach"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 27 Jun 2014 13:41:15 -0700",
@@ -1869,6 +2014,7 @@ module.exports = {
   },
   "F684A41D-8622-4415-937F-1BCC6A32C691": {
     "146df0fa324bde48": {
+      "unreadMessageCount": 0,
       "messages": {
         "Ed Shadi <shadi@devbootcamp.com>": {
           "attachments": [
@@ -1883,7 +2029,8 @@ module.exports = {
               "from": "Ed Shadi <shadi@devbootcamp.com>",
               "subject": "Re: attach"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 27 Jun 2014 13:51:43 -0700",
@@ -1892,6 +2039,7 @@ module.exports = {
   },
   "github-edshadi-receipt-2014-06-17.pdf": {
     "146ab2130516dfcb": {
+      "unreadMessageCount": 0,
       "messages": {
         "GitHub <support@github.com>": {
           "attachments": [
@@ -1906,7 +2054,8 @@ module.exports = {
               "from": "GitHub <support@github.com>",
               "subject": "[GitHub] Payment Receipt"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Tue, 17 Jun 2014 11:40:12 -0700",
@@ -1915,6 +2064,7 @@ module.exports = {
   },
   "meeting.ics": {
     "14600a00166bb73b": {
+      "unreadMessageCount": 0,
       "messages": {
         "UCSF Buchanan Dental Center - Faculty Oral Surgery <emailer@easymarkit.com>": {
           "attachments": [
@@ -1929,13 +2079,15 @@ module.exports = {
               "date": "Thu, 15 May 2014 09:03:31 -0700",
               "from": "UCSF Buchanan Dental Center - Faculty Oral Surgery <emailer@easymarkit.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Thu, 15 May 2014 09:03:31 -0700",
       "subject": "Appointment Confirmation from UCSF Buchanan Dental Center - Faculty Oral Surgery"
     },
     "145998398b81965f": {
+      "unreadMessageCount": 0,
       "messages": {
         "UCSF Buchanan Dental Center - Faculty Oral Surgery <emailer@easymarkit.com>": {
           "attachments": [
@@ -1950,7 +2102,8 @@ module.exports = {
               "date": "Fri, 25 Apr 2014 08:31:38 -0700",
               "from": "UCSF Buchanan Dental Center - Faculty Oral Surgery <emailer@easymarkit.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 25 Apr 2014 08:31:38 -0700",
@@ -1959,6 +2112,7 @@ module.exports = {
   },
   "LOGO MAIL.png": {
     "14668fa260f92d20": {
+      "unreadMessageCount": 0,
       "messages": {
         "ed shadi <edshadi@gmail.com>": {
           "attachments": [
@@ -1973,7 +2127,8 @@ module.exports = {
               "subject": "Re: Quote",
               "from": "ed shadi <edshadi@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Wed, 4 Jun 2014 15:49:15 -0700",
@@ -1982,6 +2137,7 @@ module.exports = {
   },
   "20141116_SHADI_4HOSPC.pdf": {
     "148df19b8fde1830": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Lufthansa.com\" <online@booking-lufthansa.com>": {
           "attachments": [
@@ -1996,7 +2152,8 @@ module.exports = {
               "subject": "lufthansa.com - Your cancellation - Reservation code: 4HOSPC",
               "date": "Sun, 5 Oct 2014 08:57:55 +0200"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sun, 5 Oct 2014 08:57:55 +0200",
@@ -2005,6 +2162,7 @@ module.exports = {
   },
   "IMG_4271.MOV": {
     "146a479f20b780d1": {
+      "unreadMessageCount": 0,
       "messages": {
         "Sarah Crain <ms.sarah.crain@gmail.com>": {
           "attachments": [
@@ -2019,7 +2177,8 @@ module.exports = {
               "date": "Mon, 16 Jun 2014 12:39:32 +0100",
               "subject": "Sister talk"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Mon, 16 Jun 2014 12:39:32 +0100",
@@ -2028,6 +2187,7 @@ module.exports = {
   },
   "EPSON002.JPG": {
     "1452e32b00fc6d83": {
+      "unreadMessageCount": 0,
       "messages": {
         "Adam Shadi <shawadia@gmail.com>": {
           "attachments": [
@@ -2042,7 +2202,8 @@ module.exports = {
               "subject": "Adam's Stuff",
               "from": "Adam Shadi <shawadia@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 4 Apr 2014 15:24:05 -0400",
@@ -2051,6 +2212,7 @@ module.exports = {
   },
   "adam-paper.pdf": {
     "1452e32b00fc6d83": {
+      "unreadMessageCount": 0,
       "messages": {
         "Ed Shadi <edshadi@gmail.com>": {
           "attachments": [
@@ -2065,7 +2227,8 @@ module.exports = {
               "from": "Ed Shadi <edshadi@gmail.com>",
               "subject": "Re: Adam's Stuff"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 4 Apr 2014 12:35:48 -0700",
@@ -2074,6 +2237,7 @@ module.exports = {
   },
   "OCNA_DraftMinutes_050514.docx": {
     "14639c2ed8843d31": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -2088,7 +2252,8 @@ module.exports = {
               "subject": "OCNA Draft Minutes of May 2014 for Review-Next Meeting June 2, 2104 at DeFremery House",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Mon, 26 May 2014 11:20:14 -0700",
@@ -2097,6 +2262,7 @@ module.exports = {
   },
   "OC Strides flyer 5-31-14.pdf": {
     "1464e3e012e7bfce": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -2111,7 +2277,8 @@ module.exports = {
               "subject": "Oak Center Neighborhood Health Walk: TOMORROW 5/31 10 AM at DeFremery House",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 30 May 2014 10:47:04 -0700",
@@ -2120,6 +2287,7 @@ module.exports = {
   },
   "Oak Cnt Agenda 0600214.pdf": {
     "1465f1b717b8a7a7": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -2134,7 +2302,8 @@ module.exports = {
               "subject": "Fwd: OCNA",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Mon, 2 Jun 2014 17:22:51 -0700",
@@ -2143,6 +2312,7 @@ module.exports = {
   },
   "DraftWOSPEIRLetter.docx": {
     "1465f1b717b8a7a7": {
+      "unreadMessageCount": 0,
       "messages": {
         "\"Michael J. Taffet\" <mjtaffet@gmail.com>": {
           "attachments": [
@@ -2157,7 +2327,8 @@ module.exports = {
               "subject": "Fwd: OCNA",
               "from": "\"Michael J. Taffet\" <mjtaffet@gmail.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Mon, 2 Jun 2014 17:22:51 -0700",
@@ -2166,6 +2337,7 @@ module.exports = {
   },
   "Job Fair Flyer for April 24th, 2014.pdf": {
     "1458a7ea6d4c47b9": {
+      "unreadMessageCount": 0,
       "messages": {
         "JoAnn Hollis <jah06@sbcglobal.net>": {
           "attachments": [
@@ -2180,7 +2352,8 @@ module.exports = {
               "from": "JoAnn Hollis <jah06@sbcglobal.net>",
               "subject": "Fw: Mayor's Job Fair Flyer-April 24th from 1-4pm at West Oakland YMCA 3265 Market St."
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Tue, 22 Apr 2014 10:32:03 -0700 (PDT)",
@@ -2189,6 +2362,7 @@ module.exports = {
   },
   "github-edshadi-receipt-2014-10-19.pdf": {
     "1492ae6922e03a66": {
+      "unreadMessageCount": 0,
       "messages": {
         "GitHub <support@github.com>": {
           "attachments": [
@@ -2203,7 +2377,8 @@ module.exports = {
               "from": "GitHub <support@github.com>",
               "subject": "[GitHub] Payment Receipt"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Sun, 19 Oct 2014 17:13:13 -0700",
@@ -2212,6 +2387,7 @@ module.exports = {
   },
   "teacher_workstations1.pdf": {
     "145778fb07961ce5": {
+      "unreadMessageCount": 0,
       "messages": {
         "Reham Shadi <reham@interiormonkey.com>": {
           "attachments": [
@@ -2226,7 +2402,8 @@ module.exports = {
               "subject": "teacher stations",
               "from": "Reham Shadi <reham@interiormonkey.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 18 Apr 2014 17:17:55 -0800",
@@ -2235,6 +2412,7 @@ module.exports = {
   },
   "teacher_workstations2.pdf": {
     "145778fb07961ce5": {
+      "unreadMessageCount": 0,
       "messages": {
         "Reham Shadi <reham@interiormonkey.com>": {
           "attachments": [
@@ -2249,7 +2427,8 @@ module.exports = {
               "subject": "teacher stations",
               "from": "Reham Shadi <reham@interiormonkey.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 18 Apr 2014 17:17:55 -0800",
@@ -2258,6 +2437,7 @@ module.exports = {
   },
   "github-edshadi-receipt-2014-04-17.pdf": {
     "14570fdaab455c0e": {
+      "unreadMessageCount": 0,
       "messages": {
         "GitHub <support@github.com>": {
           "attachments": [
@@ -2272,7 +2452,8 @@ module.exports = {
               "from": "GitHub <support@github.com>",
               "subject": "[GitHub] Payment Receipt"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Thu, 17 Apr 2014 11:40:39 -0700",
@@ -2281,6 +2462,7 @@ module.exports = {
   },
   "google.png": {
     "145757da34eff02a": {
+      "unreadMessageCount": 0,
       "messages": {
         "no-reply@accounts.google.com": {
           "attachments": [
@@ -2295,7 +2477,8 @@ module.exports = {
               "subject": "Google Account password changed",
               "from": "no-reply@accounts.google.com"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 18 Apr 2014 15:38:46 +0000 (UTC)",
@@ -2304,6 +2487,7 @@ module.exports = {
   },
   "profilephoto.png": {
     "145757da34eff02a": {
+      "unreadMessageCount": 0,
       "messages": {
         "no-reply@accounts.google.com": {
           "attachments": [
@@ -2318,7 +2502,8 @@ module.exports = {
               "subject": "Google Account password changed",
               "from": "no-reply@accounts.google.com"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 18 Apr 2014 15:38:46 +0000 (UTC)",
@@ -2327,6 +2512,7 @@ module.exports = {
   },
   "Invoice-Z3WEB0001.pdf": {
     "14576e18b5d23f15": {
+      "unreadMessageCount": 0,
       "messages": {
         "Reham Shadi <reham@interiormonkey.com>": {
           "attachments": [
@@ -2341,7 +2527,8 @@ module.exports = {
               "subject": "invoice for Beni",
               "from": "Reham Shadi <reham@interiormonkey.com>"
             }
-          ]
+          ],
+          "unreadMessageCount": 0
         }
       },
       "date": "Fri, 18 Apr 2014 14:07:43 -0800",

@@ -17,14 +17,14 @@ var Threads = React.createClass({
     Object.keys(this.props.threads).forEach(function(id) {
       var thread = this.props.threads[id];
       // we're only interested in unread messages, ignore thread if it has no unread messages
-      if(this.props.view === Constants.UNREAD_MESSAGES_VIEW && !thread.hasUnreadMessages) return;
+      if(this.props.view === Constants.UNREAD_MESSAGES_VIEW && !thread.unreadMessageCount > 0) return;
 
       var messages = thread.messages;
       var subject = {
         text: thread.subject,
-        messageCount: Object.keys(messages).length
+        messageCount: thread.unreadMessageCount
       }
-      threads.push(<Thread key={id} date={thread.date} subject={subject} attachments={messages} view={this.props.view} />)
+      threads.push(<Thread key={id} date={thread.date} subject={subject} messages={messages} view={this.props.view} />)
     }.bind(this))
     return threads;
   }

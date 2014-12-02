@@ -50,10 +50,12 @@ AttachmentMaker = {
     var type = this.getFileType(part.filename);
     at = at || part.filename;
     this.attachments[at] = this.attachments[at] || {};
-    this.attachments[at][message.threadId] = this.attachments[at][message.threadId] || {};
+    this.attachments[at][message.threadId] = this.attachments[at][message.threadId] || {
+      unreadMessageCount: 0
+    };
     var from = message.payload.headers.filter(function(header) { return header.name === "From" })[0].value;
     this.attachments[at][message.threadId].messages = this.attachments[at][message.threadId].messages || {};
-    this.attachments[at][message.threadId].messages[from] = this.attachments[at][message.threadId].messages[from] || {attachments: []};
+    this.attachments[at][message.threadId].messages[from] = this.attachments[at][message.threadId].messages[from] || {attachments: [], unreadMessageCount: 0};
     var data = {
       type: type,
       filename: part.filename,
@@ -77,9 +79,9 @@ AttachmentMaker = {
 
     if(data.unread) {
       // this allows us to ask the thread if it has unread messages.
-      this.attachments[at][message.threadId].hasUnreadMessages = true;
+      ++this.attachments[at][message.threadId].unreadMessageCount;
       // this allows us to ask there are unread messages from this user.
-      this.attachments[at][message.threadId].messages[from].hasUnreadMessages = true;
+      ++this.attachments[at][message.threadId].messages[from].unreadMessageCount;
     }
 
     this.attachments[at][message.threadId].messages[from].attachments.push(data);

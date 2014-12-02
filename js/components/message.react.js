@@ -25,7 +25,7 @@ var Message = React.createClass({
     return attachments;
   },
   renderSender: function() {
-    if(this.isInUnreadView() && !this.props.message.hasUnreadMessages) return;
+    if(this.isInUnreadView() && !this.props.message.unreadMessageCount > 0) return;
     return(<Sender sender={this.props.sender} />);
   },
   isInUnreadView: function() {
