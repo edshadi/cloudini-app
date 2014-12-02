@@ -2,7 +2,7 @@ var constants = require('../constants/constants')
   , events = require('events')
   , emitter = new events.EventEmitter()
   , attachmentMaker = require('../makers/attachment-maker')
-  , data = require('../firebase-cache')
+  , data = require('../cache/firebase-cache')
   , _attachments = {}
   , CHANGE_EVENT = 'change'
   ;
