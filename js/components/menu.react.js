@@ -41,7 +41,7 @@ var Menu = React.createClass({
   switchView: function(e) {
     e.preventDefault();
     // this is the event handler passed down from parent
-    this.props.viewSwitcher(e.target.dataset.view);
+    this.props.viewSwitcher({scope: e.target.dataset.view});
     this.setState({ hidden: true });
   }
 });

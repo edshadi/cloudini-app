@@ -20,7 +20,7 @@ var Message = React.createClass({
       // we're only interested in unread messages, ignore read messages.
       if(this.isInUnreadView() && !attachment.unread) return;
 
-      attachments.push(<Attachment key={attachment.id} attachment={attachment} />)
+      attachments.push(<Attachment key={attachment.id} attachment={attachment} viewSwitcher={this.props.viewSwitcher} />)
     }.bind(this));
     return attachments;
   },

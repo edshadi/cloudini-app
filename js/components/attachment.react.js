@@ -1,6 +1,7 @@
 /** @jsx React.DOM */
 var React = require('react')
-  , Faker = require('faker')
+  , AttachmentStore = require('../stores/attachment-store')
+  , constants = require('../constants/cloudini-constants')
   ;
 
 var Attachment = React.createClass({
@@ -15,10 +16,18 @@ var Attachment = React.createClass({
         <div className="file-actions">
           <span><a href={this.previewLink()} target="_blank">Preview</a></span>
           <span><a href={this.downloadLink()}>Download</a></span>
-          <span><a href="#">{this.attachment.versionCount-1} Previous Versions</a></span>
+          <span><a href="#" onClick={this.showPreviousVersions} >{this.attachment.versionCount-1} Previous Versions</a></span>
         </div>
       </div>
     );
+  },
+  showPreviousVersions: function(e) {
+    e.preventDefault();
+    var baseName = this.attachment.baseName;
+    this.props.viewSwitcher({
+      scope: constants.PREVIOUS_VERSIONS_VIEW,
+      attachment: baseName
+    });
   },
   //TODO: unfortunately google doesn't give us a direct way to get the download_url, so some of this
   // is a hack based on inspecting several attachment download_urls. attributes: ui, ik are unknowns but seem

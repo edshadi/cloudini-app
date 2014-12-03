@@ -5,7 +5,6 @@ var App = (function() {
     getAuthToken: function() {
       chrome.identity.getAuthToken({'interactive': true }, function (accessToken) {
         this.authToken = accessToken;
-        // this.getMessageList();
         this.getThreadList()
       }.bind(this))
     },

@@ -1,7 +1,8 @@
 /** @jsx React.DOM */
 
 var React = require('react')
-  , Constants = require('../constants/cloudini-constants')
+  , AttachmentStore = require('../stores/attachment-store')
+  , constants = require('../constants/cloudini-constants')
   , SidebarHeader = require('./sidebar-header.react')
   , Threads = require('./threads.react')
   , Launcher = require('./launcher.react')
@@ -10,8 +11,15 @@ var React = require('react')
 var Sidebar = React.createClass({
   getInitialState: function() {
     return {
-      view: Constants.UNREAD_MESSAGES_VIEW
+      scope: constants.UNREAD_MESSAGES_VIEW,
+      attachments: {}
     };
+  },
+  componentDidMount: function() {
+    AttachmentStore.onChangeEvent(function() {
+      if(this.isMounted()) this.setState({ attachments: AttachmentStore.attachments() })
+    }.bind(this));
+    AttachmentStore.get({scope: this.state.scope});
   },
   render: function() {
     return (
@@ -25,17 +33,18 @@ var Sidebar = React.createClass({
   },
   renderAttachments: function() {
     var attachments = [];
-    Object.keys(this.props.attachments).forEach(function(filename) {
-      if(this.isInUnreadView() && this.props.attachments[filename].unreadMessageCount === 0) return;
-      attachments.push(<Threads key={filename} threads={this.props.attachments[filename].threads} view={this.state.view}/>);
+    Object.keys(this.state.attachments).forEach(function(filename) {
+      if(this.isInUnreadView() && this.state.attachments[filename].unreadMessageCount === 0) return;
+      attachments.push(<Threads key={filename} threads={this.state.attachments[filename].threads} view={this.state.scope} viewSwitcher={this.switchView} />);
     }.bind(this));
     return attachments;
   },
   switchView: function(view) {
-    this.setState({ view: view });
+    AttachmentStore.get(view);
+    this.setState(view);
   },
   isInUnreadView: function() {
-    return this.state.view === Constants.UNREAD_MESSAGES_VIEW
+    return this.state.scope === constants.UNREAD_MESSAGES_VIEW
   }
 });
 module.exports = Sidebar;

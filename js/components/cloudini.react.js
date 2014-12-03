@@ -2,22 +2,16 @@
  * @jsx React.DOM
  */
 
-var React = require('react');
-var Sidebar = require('./sidebar.react');
-var AttachmentStore = require('../stores/attachment-store');
-var Launcher = require('./launcher.react');
+var React = require('react')
+  , Sidebar = require('./sidebar.react')
+  , Launcher = require('./launcher.react')
+  ;
+
 var Cloudini = React.createClass({
   getInitialState: function() {
     return {
-      attachments: {},
       hidden: false
     }
-  },
-  componentDidMount: function() {
-    AttachmentStore.onChangeEvent(function() {
-      if(this.isMounted()) this.setState({ attachments: AttachmentStore.attachments() })
-    }.bind(this));
-    AttachmentStore.fromCache();
   },
   render: function() {
     return (
@@ -30,7 +24,7 @@ var Cloudini = React.createClass({
     return(<Launcher label="+ C" handleClick={this.showSidebar} />)
   },
   renderSidebar: function() {
-    return(<Sidebar attachments={this.state.attachments} hideSidebar={this.showSidebar}/>);
+    return(<Sidebar hideSidebar={this.showSidebar}/>);
   },
   showSidebar: function(e) {
     e.preventDefault();

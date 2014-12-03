@@ -23,7 +23,7 @@ var Threads = React.createClass({
         text: thread.subject,
         messageCount: thread.unreadMessageCount
       }
-      threads.push(<Thread key={id} date={thread.date} subject={subject} messages={messages} view={this.props.view} />)
+      threads.push(<Thread key={id} date={thread.date} subject={subject} messages={messages} view={this.props.view} viewSwitcher={this.props.viewSwitcher}/>)
     }.bind(this));
     return threads;
   },

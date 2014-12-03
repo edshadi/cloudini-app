@@ -65,7 +65,8 @@ AttachmentMaker = {
       id: part.body.attachmentId,
       messageId: message.id,
       threadId: message.threadId,
-      versionCount: this.attachments[at].versionCount
+      versionCount: this.attachments[at].versionCount,
+      baseName: at
     }
     message.payload.headers.some(function(header) {
       if(header.name === "From") data.from = header.value;
