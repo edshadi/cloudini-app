@@ -15,7 +15,7 @@ var Attachment = React.createClass({
         <div className="file-actions">
           <span><a href={this.previewLink()} target="_blank">Preview</a></span>
           <span><a href={this.downloadLink()}>Download</a></span>
-          <span><a href="#">{this.props.previousVersionCount || 0} Versions</a></span>
+          <span><a href="#">{this.attachment.versionCount-1} Previous Versions</a></span>
         </div>
       </div>
     );

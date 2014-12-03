@@ -26,13 +26,16 @@ var Sidebar = React.createClass({
   renderAttachments: function() {
     var attachments = [];
     Object.keys(this.props.attachments).forEach(function(filename) {
-      attachments.push(<Threads key={filename} threads={this.props.attachments[filename]} view={this.state.view}/>);
+      if(this.isInUnreadView() && this.props.attachments[filename].unreadMessageCount === 0) return;
+      attachments.push(<Threads key={filename} threads={this.props.attachments[filename].threads} view={this.state.view}/>);
     }.bind(this));
     return attachments;
   },
-  switchView: function(e) {
-    e.preventDefault();
-    this.setState({ view: e.target.dataset.view });
+  switchView: function(view) {
+    this.setState({ view: view });
+  },
+  isInUnreadView: function() {
+    return this.state.view === Constants.UNREAD_MESSAGES_VIEW
   }
 });
 module.exports = Sidebar;

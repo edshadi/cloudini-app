@@ -49,20 +49,23 @@ AttachmentMaker = {
   appendFile: function(message, part, at) {
     var type = this.getFileType(part.filename);
     at = at || part.filename;
-    this.attachments[at] = this.attachments[at] || {};
-    this.attachments[at][message.threadId] = this.attachments[at][message.threadId] || {
+    this.attachments[at] = this.attachments[at] || {threads: {}, unreadMessageCount: 0, versionCount: 0};
+    this.attachments[at].threads[message.threadId] = this.attachments[at].threads[message.threadId] || {
       unreadMessageCount: 0
     };
     var from = message.payload.headers.filter(function(header) { return header.name === "From" })[0].value;
-    this.attachments[at][message.threadId].messages = this.attachments[at][message.threadId].messages || {};
-    this.attachments[at][message.threadId].messages[from] = this.attachments[at][message.threadId].messages[from] || {attachments: [], unreadMessageCount: 0};
+    this.attachments[at].threads[message.threadId].messages = this.attachments[at].threads[message.threadId].messages || {};
+    this.attachments[at].threads[message.threadId].messages[from] = this.attachments[at].threads[message.threadId].messages[from] || {attachments: [], unreadMessageCount: 0};
+
+    ++this.attachments[at].versionCount; // increment the version count on this attachment
+
     var data = {
       type: type,
       filename: part.filename,
       id: part.body.attachmentId,
       messageId: message.id,
       threadId: message.threadId,
-      versions: []
+      versionCount: this.attachments[at].versionCount
     }
     message.payload.headers.some(function(header) {
       if(header.name === "From") data.from = header.value;
@@ -70,8 +73,8 @@ AttachmentMaker = {
       if(header.name === "Subject") data.subject = header.value;
     }.bind(this));
     // set the thread's data to the latest message
-    this.attachments[at][message.threadId].date = data.date;
-    this.attachments[at][message.threadId].subject = data.subject;
+    this.attachments[at].threads[message.threadId].date = data.date;
+    this.attachments[at].threads[message.threadId].subject = data.subject;
 
     data.unread = message.labelIds.filter(function(label) {
       return label === "UNREAD"
@@ -79,12 +82,13 @@ AttachmentMaker = {
 
     if(data.unread) {
       // this allows us to ask the thread if it has unread messages.
-      ++this.attachments[at][message.threadId].unreadMessageCount;
+      ++this.attachments[at].unreadMessageCount;
+      // this allows us to ask the thread if it has unread messages.
+      ++this.attachments[at].threads[message.threadId].unreadMessageCount;
       // this allows us to ask there are unread messages from this user.
-      ++this.attachments[at][message.threadId].messages[from].unreadMessageCount;
+      ++this.attachments[at].threads[message.threadId].messages[from].unreadMessageCount;
     }
-
-    this.attachments[at][message.threadId].messages[from].attachments.push(data);
+    this.attachments[at].threads[message.threadId].messages[from].attachments.push(data);
     return true
   },
   threadExists: function(threads, threadId) {
