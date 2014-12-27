@@ -1,6 +1,7 @@
 /** @jsx React.DOM */
 var React = require('react')
-    , Constants = require('../constants/cloudini-constants')
+    , constants = require('../constants/cloudini-constants')
+    , Router = require('../routes/router');
     ;
 
 var Menu = React.createClass({
@@ -29,8 +30,8 @@ var Menu = React.createClass({
         </ul>
         <hr/>
         <ul>
-          <li><a onClick={this.switchView} data-view={Constants.UNREAD_MESSAGES_VIEW} href="#">Unread Messages</a></li>
-          <li><a onClick={this.switchView} data-view={Constants.ALL_MESSAGES_VIEW} href="#">All Messages</a></li>
+          <li><a onClick={this.switchView} href={"#"+constants.UNREAD_MESSAGES_VIEW}>Unread Messages</a></li>
+          <li><a onClick={this.switchView} data-view={constants.ALL_MESSAGES_VIEW} href={"#"+constants.ALL_MESSAGES_VIEW}>All Messages</a></li>
         </ul>
       </div>
     );
@@ -40,9 +41,7 @@ var Menu = React.createClass({
   },
   switchView: function(e) {
     e.preventDefault();
-    // this is the event handler passed down from parent
-    this.props.viewSwitcher({scope: e.target.dataset.view});
-    this.setState({ hidden: true });
+    Router.triggerLocationChange({location: e.target.hash});
   }
 });
 

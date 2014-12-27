@@ -22,7 +22,7 @@ var AttachmentStore = {
         this.all({cache: options.cache})
         break;
       case constants.PREVIOUS_VERSIONS_VIEW:
-        this.show({attachment: options.attachment, cache: options.cache})
+        this.show({attachmentName: options.attachmentName, cache: options.cache})
         break;
       default:
         this.all({cache: options.cache})
@@ -35,8 +35,9 @@ var AttachmentStore = {
     this.emit(CHANGE_EVENT);
   },
   show: function(options) {
+    console.log(options.attachmentName);
     _attachments = {};
-    _attachments[options.attachment] = attCache[options.attachment];
+    _attachments[options.attachmentName] = attCache[options.attachmentName];
     this.emit(CHANGE_EVENT);
   },
   allUnread: function() {

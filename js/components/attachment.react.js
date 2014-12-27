@@ -1,6 +1,7 @@
 /** @jsx React.DOM */
 var React = require('react')
   , AttachmentStore = require('../stores/attachment-store')
+  , Router = require('../routes/router')
   , constants = require('../constants/cloudini-constants')
   ;
 
@@ -24,9 +25,8 @@ var Attachment = React.createClass({
   showPreviousVersions: function(e) {
     e.preventDefault();
     var baseName = this.attachment.baseName;
-    this.props.viewSwitcher({
-      scope: constants.PREVIOUS_VERSIONS_VIEW,
-      attachment: baseName
+    Router.triggerLocationChange({
+      location: "#"+constants.PREVIOUS_VERSIONS_VIEW+"/"+baseName
     });
   },
   //TODO: unfortunately google doesn't give us a direct way to get the download_url, so some of this

@@ -11,7 +11,7 @@ var React = require('react')
 var Sidebar = React.createClass({
   getInitialState: function() {
     return {
-      scope: constants.UNREAD_MESSAGES_VIEW,
+      scope: this.props.options.scope,
       attachments: {}
     };
   },
@@ -19,12 +19,12 @@ var Sidebar = React.createClass({
     AttachmentStore.onChangeEvent(function() {
       if(this.isMounted()) this.setState({ attachments: AttachmentStore.attachments() })
     }.bind(this));
-    AttachmentStore.get({scope: this.state.scope});
+    AttachmentStore.get({scope: this.state.scope, attachmentName: this.props.options.attachmentName});
   },
   render: function() {
     return (
       <div id="sidebar">
-        <SidebarHeader fileStream="INBOX" viewSwitcher={this.switchView} />
+        <SidebarHeader fileStream="INBOX" />
         <div id="sidebar-body">
           {this.renderAttachments()}
         </div>
@@ -35,7 +35,7 @@ var Sidebar = React.createClass({
     var attachments = [];
     Object.keys(this.state.attachments).forEach(function(filename) {
       if(this.isInUnreadView() && this.state.attachments[filename].unreadMessageCount === 0) return;
-      attachments.push(<Threads key={filename} threads={this.state.attachments[filename].threads} view={this.state.scope} viewSwitcher={this.switchView} />);
+      attachments.push(<Threads key={filename} threads={this.state.attachments[filename].threads} />);
     }.bind(this));
     return attachments;
   },

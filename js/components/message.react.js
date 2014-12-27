@@ -17,19 +17,12 @@ var Message = React.createClass({
   renderAttachment: function() {
     var attachments = [];
     this.props.message.attachments.forEach(function(attachment, i) {
-      // we're only interested in unread messages, ignore read messages.
-      if(this.isInUnreadView() && !attachment.unread) return;
-
-      attachments.push(<Attachment key={attachment.id} attachment={attachment} viewSwitcher={this.props.viewSwitcher} />)
+      attachments.push(<Attachment key={attachment.id} attachment={attachment} />)
     }.bind(this));
     return attachments;
   },
   renderSender: function() {
-    if(this.isInUnreadView() && !this.props.message.unreadMessageCount > 0) return;
     return(<Sender sender={this.props.sender} />);
-  },
-  isInUnreadView: function() {
-    return this.props.view === Constants.UNREAD_MESSAGES_VIEW
   }
 });
 
