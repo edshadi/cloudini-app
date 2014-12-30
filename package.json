@@ -5,7 +5,7 @@
   "main": "js/app.js",
   "dependencies": {
     "es6-promise": "~0.1.1",
-    "react": "~0.10",
+    "react": "~0.12.2",
     "browser-request": "~0.3.1",
     "events": "~1.0.1",
     "firebase": "~1.1.3"
