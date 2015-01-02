@@ -11,9 +11,10 @@ var Menu = React.createClass({
     }
   },
   render: function() {
+    var menuIcon = chrome.extension.getURL("./images/cloudini-menu-icon.png");
     return (
       <div id="menu">
-        <img src="./images/cloudini-menu-icon.png" alt="Menu" className="menu-icon" onClick={this.showMenu}/>
+        <img src={menuIcon} alt="Menu" className="menu-icon" onClick={this.showMenu}/>
         {this.renderContent()}
       </div>
     );
@@ -30,8 +31,8 @@ var Menu = React.createClass({
         </ul>
         <hr/>
         <ul>
-          <li><a onClick={this.switchView} href={"#"+constants.UNREAD_MESSAGES_VIEW}>Unread Messages</a></li>
-          <li><a onClick={this.switchView} data-view={constants.ALL_MESSAGES_VIEW} href={"#"+constants.ALL_MESSAGES_VIEW}>All Messages</a></li>
+          <li><a onClick={this.switchView} href="#" data-view={"#"+constants.UNREAD_MESSAGES_VIEW}>Unread Messages</a></li>
+          <li><a onClick={this.switchView} data-view={constants.ALL_MESSAGES_VIEW} href="#">All Messages</a></li>
         </ul>
       </div>
     );
@@ -41,7 +42,7 @@ var Menu = React.createClass({
   },
   switchView: function(e) {
     e.preventDefault();
-    Router.triggerLocationChange({location: e.target.hash});
+    Router.triggerLocationChange({location: e.target.dataset.view});
   }
 });
 

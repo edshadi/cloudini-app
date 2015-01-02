@@ -22,6 +22,15 @@ var Sidebar = React.createClass({
     AttachmentStore.get({scope: this.state.scope, attachmentName: this.props.options.attachmentName});
   },
   render: function() {
+    var gmail = require('../vendor/gmail')
+    gmail.observe.on('view_thread', function(obj) {
+      console.log('view_thread', obj);
+    });
+    // now we have access to the sub observers view_email and load_email_menu
+    gmail.observe.on('view_email', function(obj) {
+      console.log('view_email', obj);
+    });
+
     return (
       <div id="sidebar">
         <SidebarHeader fileStream="INBOX" />

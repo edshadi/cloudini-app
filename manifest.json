@@ -31,5 +31,8 @@
     ]
   },
   "manifest_version" : 2,
-  "web_accessible_resources" : ["images/*"]
+  "web_accessible_resources" : [
+    "images/*",
+    "js/main.js"
+  ]
 }

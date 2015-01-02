@@ -27,7 +27,7 @@ var Sender = React.createClass({
     return ""
   },
   avatar: function() {
-    return this.props.sender.avatar ||  './images/avatar.jpeg';
+    return chrome.extension.getURL(this.props.sender.avatar);
   },
   on: function() {
     return new Date(this.props.sender.on).toLocaleTimeString()

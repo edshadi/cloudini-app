@@ -5,11 +5,12 @@ var React = require('react')
 var Subject = React.createClass({
 
   render: function() {
+    var envelopIcon = chrome.extension.getURL("./images/cloudini-envelope.png");
     return (
       <div className="thread">
         <ul className="thread-data">
           <li className="message-envelop">
-            <img src="./images/cloudini-envelope.png" className="envelope" alt="message" /></li>
+            <img src={envelopIcon} className="envelope" alt="message" /></li>
           <li className="message-title">{this.shortenSubject()}</li>
           <li className="message-count"><span>{this.props.subject.messageCount}</span></li>
         </ul>
