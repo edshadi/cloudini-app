@@ -16,20 +16,11 @@ var Sidebar = React.createClass({
     };
   },
   componentDidMount: function() {
-    var gmail = require('../vendor/gmail')
-    gmail.observe.on('view_thread', function(obj) {
-      console.log('view_thread', obj);
-    });
-    gmail.observe.on('view_email', function(obj) {
-      var attachments = {"no-attachment": {"threads": {}}};
-      if(!AttachmentStore.threads()[obj.id]) return;
-      attachments["no-attachment"]["threads"][obj.id] = AttachmentStore.threads()[obj.id];
-      if(this.isMounted()) this.setState({ attachments: attachments })
-    }.bind(this));
     AttachmentStore.onChangeEvent(function() {
       if(this.isMounted()) this.setState({ attachments: AttachmentStore.attachments() })
     }.bind(this));
     AttachmentStore.get({scope: this.state.scope, attachmentName: this.props.options.attachmentName});
+    this.observerGmail();
   },
   render: function() {
     return (
@@ -51,6 +42,28 @@ var Sidebar = React.createClass({
   switchView: function(view) {
     AttachmentStore.get(view);
     this.setState(view);
+  },
+  observerGmail: function() {
+    var gmail = require('../vendor/gmail')
+    gmail.observe.on('view_thread', function(obj) {
+      this.showThreadMessage(obj)
+    }.bind(this));
+    gmail.observe.on('view_email', function(obj) {
+      this.showThreadMessage(obj)
+    }.bind(this));
+    window.onhashchange = function (location) {
+      if(window.location.hash === "#inbox") {
+        this.setState({ attachments: AttachmentStore.attachments() })
+      }
+    }.bind(this)
+
+  },
+  showThreadMessage: function(obj) {
+    var attachments = {"no-attachment": {"threads": {}}};
+    var id = obj.id || location.hash.split("/")[1]; // in view_thread event, we don't get an id..boo!
+    if(!AttachmentStore.threads()[id]) return;
+    attachments["no-attachment"]["threads"][id] = AttachmentStore.threads()[id];
+    if(this.isMounted()) this.setState({ attachments: attachments })
   }
 });
 module.exports = Sidebar;

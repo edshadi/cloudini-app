@@ -18,6 +18,6 @@ window.onload = function() {
 
 document.addEventListener('Gmail-loaded', function(e) {
   constants.GLOBALS = e.detail;
-  React.renderComponent(<Cloudini />, cloudiniDiv);
+  React.render(<Cloudini />, cloudiniDiv);
   Router.triggerLocationChange({location: ''});
 });
