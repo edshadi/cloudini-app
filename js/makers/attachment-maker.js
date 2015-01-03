@@ -1,5 +1,5 @@
 require('../vendor/fuzzy-match');
-AttachmentMaker = {
+var AttachmentMaker = {
   attachments: {},
   threads: [],
   create: function(data) {

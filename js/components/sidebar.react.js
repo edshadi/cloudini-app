@@ -16,21 +16,22 @@ var Sidebar = React.createClass({
     };
   },
   componentDidMount: function() {
+    var gmail = require('../vendor/gmail')
+    gmail.observe.on('view_thread', function(obj) {
+      console.log('view_thread', obj);
+    });
+    gmail.observe.on('view_email', function(obj) {
+      var attachments = {"no-attachment": {"threads": {}}};
+      if(!AttachmentStore.threads()[obj.id]) return;
+      attachments["no-attachment"]["threads"][obj.id] = AttachmentStore.threads()[obj.id];
+      if(this.isMounted()) this.setState({ attachments: attachments })
+    }.bind(this));
     AttachmentStore.onChangeEvent(function() {
       if(this.isMounted()) this.setState({ attachments: AttachmentStore.attachments() })
     }.bind(this));
     AttachmentStore.get({scope: this.state.scope, attachmentName: this.props.options.attachmentName});
   },
   render: function() {
-    var gmail = require('../vendor/gmail')
-    gmail.observe.on('view_thread', function(obj) {
-      console.log('view_thread', obj);
-    });
-    // now we have access to the sub observers view_email and load_email_menu
-    gmail.observe.on('view_email', function(obj) {
-      console.log('view_email', obj);
-    });
-
     return (
       <div id="sidebar">
         <SidebarHeader fileStream="INBOX" />
@@ -43,7 +44,6 @@ var Sidebar = React.createClass({
   renderAttachments: function() {
     var attachments = [];
     Object.keys(this.state.attachments).forEach(function(filename) {
-      if(this.isInUnreadView() && this.state.attachments[filename].unreadMessageCount === 0) return;
       attachments.push(<Threads key={filename} threads={this.state.attachments[filename].threads} />);
     }.bind(this));
     return attachments;
@@ -51,9 +51,6 @@ var Sidebar = React.createClass({
   switchView: function(view) {
     AttachmentStore.get(view);
     this.setState(view);
-  },
-  isInUnreadView: function() {
-    return this.state.scope === constants.UNREAD_MESSAGES_VIEW
   }
 });
 module.exports = Sidebar;

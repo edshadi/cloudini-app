@@ -3,15 +3,20 @@ var constants = require('../constants/cloudini-constants')
   , events = require('events')
   , emitter = new events.EventEmitter()
   , attachmentMaker = require('../makers/attachment-maker')
+  , threadMaker = require('../makers/thread-maker')
   , fbCache = require('../cache/firebase-cache')
   , attCache = require('../cache/attachment-cache')
   , _attachments = {}
+  , _threads = {}
   , CHANGE_EVENT = 'change'
   ;
 
 var AttachmentStore = {
   attachments: function() {
     return _attachments;
+  },
+  threads: function() {
+    return _threads;
   },
   get: function(options) {
     switch(options.scope) {
@@ -32,6 +37,7 @@ var AttachmentStore = {
     if(options.cache) return this.fromCache();
     attachmentMaker.create(fbCache.raw.users.edshadi.theads);
     _attachments = attachmentMaker.attachments;
+    this.cacheThreads();
     this.emit(CHANGE_EVENT);
   },
   show: function(options) {
@@ -62,7 +68,15 @@ var AttachmentStore = {
         })
       })
     });
+    this.cacheThreads();
     this.emit(CHANGE_EVENT);
+  },
+  cacheThreads: function() {
+    Object.keys(attCache).forEach(function(key){
+      Object.keys(attCache[key].threads).forEach(function(threadId) {
+        _threads[threadId] = attCache[key].threads[threadId];
+      })
+    }.bind(this))
   },
   fromCache: function() {
     _attachments = attCache;
@@ -74,10 +88,10 @@ var AttachmentStore = {
   onChangeEvent: function(callback) {
     this.on(CHANGE_EVENT, callback)
   },
-  cacheToFile: function() {
+  cacheToFile: function(filename) {
     this.all()
     var fs = require('fs')
-    fs.writeFile('/Users/shadi/Development/Github/cloudini-extension/cloudini-app/js/cache/attachment-cache.js', "module.exports = "+JSON.stringify(this.attachments(),  null, 2), function(err) {
+    fs.writeFile('/Users/shadi/Development/Github/cloudini-extension/cloudini-app/js/cache/'+filename, "module.exports = "+JSON.stringify(this.attachments(),  null, 2), function(err) {
       console.log(err)
     }.bind(this))
   },

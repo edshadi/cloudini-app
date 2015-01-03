@@ -1,29 +1,29 @@
 var jQuery = require('jquery')
-  , constants = require('../constants/cloudini-constants')
-  ;
+, constants = require('../constants/cloudini-constants')
+;
 var Gmail = function(localJQuery, GLOBALS) {
 
   /*
     Use the provided 'jQuery' if possible, in order to avoid conflicts with
     other extensions that use $ for other purposes.
-  */
-  var $;
-  if (typeof localJQuery !== "undefined")
-    $ = localJQuery;
-  else if (typeof jQuery !== "undefined")
-    $ = jQuery;
+    */
+    var $;
+    if (typeof localJQuery !== "undefined")
+      $ = localJQuery;
+    else if (typeof jQuery !== "undefined")
+      $ = jQuery;
   // else leave $ undefined, which may be fine for some purposes.
 
   var api = {
-              get : {},
-              observe : {},
-              check : {},
-              tools : {},
-              tracker : {},
-              dom : {},
-              chat : {},
-              compose : {}
-            };
+    get : {},
+    observe : {},
+    check : {},
+    tools : {},
+    tracker : {},
+    dom : {},
+    chat : {},
+    compose : {}
+  };
 
 
   api.version           = "0.4";
@@ -36,33 +36,33 @@ var Gmail = function(localJQuery, GLOBALS) {
   api.get.last_active = function() {
     var data = api.tracker.globals[17][15];
     return {
-             time : data[1],
-             ip : data[3],
-             mac_address : data[9],
-             time_relative : data[10]
-           }
+     time : data[1],
+     ip : data[3],
+     mac_address : data[9],
+     time_relative : data[10]
+   }
+ }
+
+
+ api.get.loggedin_accounts = function() {
+  var data = api.tracker.globals[17][23];
+  var users = [];
+
+  for(i in data[1]) {
+    users.push({name : data[1][i][4], email : data[1][i][0]})
   }
 
-
-  api.get.loggedin_accounts = function() {
-    var data = api.tracker.globals[17][23];
-    var users = [];
-
-    for(i in data[1]) {
-      users.push({name : data[1][i][4], email : data[1][i][0]})
-    }
-
-    return users;
-  }
+  return users;
+}
 
 
-  api.get.user_email = function() {
-    return api.tracker.globals[10];
-  };
+api.get.user_email = function() {
+  return api.tracker.globals[10];
+};
 
 
-  api.get.localization = function() {
-    var isLocale = function(locale) {
+api.get.localization = function() {
+  var isLocale = function(locale) {
       // A locale is a string that begins with 2 letters, lowercase.
       // The 'lowercase' check distinguishes locales from other 2-letter strings like 'US'
       // (the user's location?).
@@ -201,7 +201,7 @@ var Gmail = function(localJQuery, GLOBALS) {
     }
 
     return tb;
-}
+  }
 
 
   api.check.is_inside_email = function() {
@@ -252,14 +252,14 @@ var Gmail = function(localJQuery, GLOBALS) {
   }
 
   api.get.compose_ids = function() {
-      var ret = [];
-      var dom = $(".AD [name=draft]");
-      for(var i = 0; i < dom.length; i++) {
-          if(dom[i].value != "undefined"){
-              ret.push(dom[i].value);
-          }
-      };
-      return ret;
+    var ret = [];
+    var dom = $(".AD [name=draft]");
+    for(var i = 0; i < dom.length; i++) {
+      if(dom[i].value != "undefined"){
+        ret.push(dom[i].value);
+      }
+    };
+    return ret;
   }
 
   api.get.email_id = function() {
@@ -465,8 +465,8 @@ var Gmail = function(localJQuery, GLOBALS) {
 
   api.get.beta = function() {
     var features = {
-                    "new_nav_bar" : $('#gbz').length == 0
-                   }
+      "new_nav_bar" : $('#gbz').length == 0
+    }
 
     return features;
   }
@@ -474,16 +474,16 @@ var Gmail = function(localJQuery, GLOBALS) {
 
   api.get.unread_emails = function() {
     return { inbox         : api.get.unread_inbox_emails(),
-             drafts        : api.get.unread_draft_emails(),
-             spam          : api.get.unread_spam_emails(),
-             forum         : api.get.unread_forum_emails(),
-             update        : api.get.unread_update_emails(),
-             promotions    : api.get.unread_promotion_emails(),
-             social        : api.get.unread_social_emails() }
-  }
+     drafts        : api.get.unread_draft_emails(),
+     spam          : api.get.unread_spam_emails(),
+     forum         : api.get.unread_forum_emails(),
+     update        : api.get.unread_update_emails(),
+     promotions    : api.get.unread_promotion_emails(),
+     social        : api.get.unread_social_emails() }
+   }
 
 
-  api.tools.error = function(str) {
+   api.tools.error = function(str) {
     if (console) {
       console.error(str);
     } else {
@@ -545,19 +545,19 @@ var Gmail = function(localJQuery, GLOBALS) {
     };
 
     var obj = {},
-      coerce_types = {
-        'true': !0,
-        'false': !1,
-        'null': null
-      };
+    coerce_types = {
+      'true': !0,
+      'false': !1,
+      'null': null
+    };
     each(params.replace(/\+/g, ' ').split('&'), function (v, j) {
       var param = v.split('='),
-        key = decodeURIComponent(param[0]),
-        val,
-        cur = obj,
-        i = 0,
-        keys = key.split(']['),
-        keys_last = keys.length - 1;
+      key = decodeURIComponent(param[0]),
+      val,
+      cur = obj,
+      i = 0,
+      keys = key.split(']['),
+      keys_last = keys.length - 1;
       if (/\[/.test(keys[0]) && /\]$/.test(keys[keys_last])) {
         keys[keys_last] = keys[keys_last].replace(/\]$/, '');
         keys = keys.shift().split('[').concat(keys);
@@ -588,10 +588,10 @@ var Gmail = function(localJQuery, GLOBALS) {
         obj[key] = coerce ? undefined : '';
       }
     });
-    return obj;
-  }
+return obj;
+}
 
-  api.tools.parse_actions = function(params, xhr) {
+api.tools.parse_actions = function(params, xhr) {
 
     // upload_attachment event - if found, don't check other observers. See issue #22
     if(params.url.act == 'fup' || params.url.act == 'fuv' || params.body_is_object) {
@@ -608,38 +608,38 @@ var Gmail = function(localJQuery, GLOBALS) {
 
     var triggered = {}; // store an object of event_name: [response_args] for events triggered by parsing the actions
     var action_map = {
-                      'tae'         : 'add_to_tasks',
-                      'rc_^i'       : 'archive',
-                      'tr'          : 'delete',
-                      'dm'          : 'delete_message_in_thread',
-                      'dl'          : 'delete_forever',
-                      'dc_'         : 'delete_label',
-                      'dr'          : 'discard_draft',
-                      'el'          : 'expand_categories',
-                      'cffm'        : 'filter_messages_like_these',
-                      'arl'         : 'label',
-                      'mai'         : 'mark_as_important',
-                      'mani'        : 'mark_as_not_important',
-                      'us'          : 'mark_as_not_spam',
-                      'sp'          : 'mark_as_spam',
-                      'mt'          : 'move_label',
-                      'ib'          : 'move_to_inbox',
-                      'ig'          : 'mute',
-                      'rd'          : 'read',
-                      'sd'          : 'save_draft',
-                      'sm'          : 'send_message',
-                      'mo'          : 'show_newly_arrived_message',
-                      'st'          : 'star',
-                      'ug'          : 'unmute',
-                      'ur'          : 'unread',
-                      'xst'         : 'unstar',
-                      'new_mail'    : 'new_email',
-                      'poll'        : 'poll',
-                      'refresh'     : 'refresh',
-                      'rtr'         : 'restore_message_in_thread',
-                      'open_email'  : 'open_email',
-                      'toggle_threads'  : 'toggle_threads'
-                     }
+      'tae'         : 'add_to_tasks',
+      'rc_^i'       : 'archive',
+      'tr'          : 'delete',
+      'dm'          : 'delete_message_in_thread',
+      'dl'          : 'delete_forever',
+      'dc_'         : 'delete_label',
+      'dr'          : 'discard_draft',
+      'el'          : 'expand_categories',
+      'cffm'        : 'filter_messages_like_these',
+      'arl'         : 'label',
+      'mai'         : 'mark_as_important',
+      'mani'        : 'mark_as_not_important',
+      'us'          : 'mark_as_not_spam',
+      'sp'          : 'mark_as_spam',
+      'mt'          : 'move_label',
+      'ib'          : 'move_to_inbox',
+      'ig'          : 'mute',
+      'rd'          : 'read',
+      'sd'          : 'save_draft',
+      'sm'          : 'send_message',
+      'mo'          : 'show_newly_arrived_message',
+      'st'          : 'star',
+      'ug'          : 'unmute',
+      'ur'          : 'unread',
+      'xst'         : 'unstar',
+      'new_mail'    : 'new_email',
+      'poll'        : 'poll',
+      'refresh'     : 'refresh',
+      'rtr'         : 'restore_message_in_thread',
+      'open_email'  : 'open_email',
+      'toggle_threads'  : 'toggle_threads'
+    }
 
     if(typeof params.url.ik == 'string') {
       api.tracker.ik = params.url.ik;
@@ -674,30 +674,30 @@ var Gmail = function(localJQuery, GLOBALS) {
       case "mt":
       case "cffm":
       case "rc_^i":
-        response = [email_ids, params.url, params.body];
-        break;
+      response = [email_ids, params.url, params.body];
+      break;
 
       case "arl":
-        response = [email_ids, params.url, params.body, params.url.acn];
-        break;
+      response = [email_ids, params.url, params.body, params.url.acn];
+      break;
 
       case "sd":
-        response = [email_ids, params.url, sent_params];
-        break;
+      response = [email_ids, params.url, sent_params];
+      break;
 
       case "tae":
       case "sm":
-        response = [params.url, params.body, sent_params];
-        break;
+      response = [params.url, params.body, sent_params];
+      break;
 
       case "el":
-        response = [params.url, params.body, sent_params.ex == '1'];
-        break;
+      response = [params.url, params.body, sent_params.ex == '1'];
+      break;
 
       case "dm":
       case "rtr":
-        response = [sent_params.m, params.url, params.body];
-        break;
+      response = [sent_params.m, params.url, params.body];
+      break;
 
     }
 
@@ -752,10 +752,10 @@ var Gmail = function(localJQuery, GLOBALS) {
   }
 
   api.tools.parse_response = function(response) {
-      var parsedResponse = [],
-          data, dataLength, endIndex, realData;
+    var parsedResponse = [],
+    data, dataLength, endIndex, realData;
 
-      try {
+    try {
 
         // gmail post response structure
         // )}]'\n<datalength><rawData>\n<dataLength><rawData>...
@@ -783,65 +783,65 @@ var Gmail = function(localJQuery, GLOBALS) {
           response = response.substring(data.length, response.length);
         }
       } catch (e) {
-          console.log('Gmail post response parsing failed.', e);
+        console.log('Gmail post response parsing failed.', e);
       }
 
       return parsedResponse;
-  }
-
-  api.tools.parse_requests = function(params, xhr) {
-    params.url_raw = params.url;
-    params.url = api.tools.parse_url(params.url);
-    if(typeof params.body == 'object') {
-      params.body_params = params.body;
-      params.body_is_object = true;
-    } else {
-      params.body_params = api.tools.deparam(params.body);
     }
 
-    if(typeof api.tracker.events != 'object' && typeof api.tracker.actions != 'object') {
-      api.tracker.events  = [];
-      api.tracker.actions = [];
+    api.tools.parse_requests = function(params, xhr) {
+      params.url_raw = params.url;
+      params.url = api.tools.parse_url(params.url);
+      if(typeof params.body == 'object') {
+        params.body_params = params.body;
+        params.body_is_object = true;
+      } else {
+        params.body_params = api.tools.deparam(params.body);
+      }
+
+      if(typeof api.tracker.events != 'object' && typeof api.tracker.actions != 'object') {
+        api.tracker.events  = [];
+        api.tracker.actions = [];
+      }
+
+      api.tracker.events.unshift(params);
+      var events = api.tools.parse_actions(params, xhr);
+
+      if(params.method == 'POST' && typeof params.url.act == 'string') {
+        api.tracker.actions.unshift(params);
+      }
+
+      if(api.tracker.events.length > 50) {
+        api.tracker.events.pop();
+      }
+
+      if(api.tracker.actions.length > 10) {
+        api.tracker.actions.pop();
+      }
+      return events;
     }
 
-    api.tracker.events.unshift(params);
-    var events = api.tools.parse_actions(params, xhr);
 
-    if(params.method == 'POST' && typeof params.url.act == 'string') {
-      api.tracker.actions.unshift(params);
-    }
+    api.tools.xhr_watcher = function () {
+      if (!api.tracker.xhr_init) {
+        var win = top.document.getElementById("js_frame").contentDocument.defaultView;
 
-    if(api.tracker.events.length > 50) {
-      api.tracker.events.pop();
-    }
+        api.tracker.xhr_init = true;
+        api.tracker.xhr_open = win.XMLHttpRequest.prototype.open;
+        api.tracker.xhr_send = win.XMLHttpRequest.prototype.send;
 
-    if(api.tracker.actions.length > 10) {
-      api.tracker.actions.pop();
-    }
-    return events;
-  }
-
-
-  api.tools.xhr_watcher = function () {
-    if (!api.tracker.xhr_init) {
-      var win = top.document.getElementById("js_frame").contentDocument.defaultView;
-
-      api.tracker.xhr_init = true;
-      api.tracker.xhr_open = win.XMLHttpRequest.prototype.open;
-      api.tracker.xhr_send = win.XMLHttpRequest.prototype.send;
-
-      win.XMLHttpRequest.prototype._gjs_open = win.XMLHttpRequest.prototype.open;
-      win.XMLHttpRequest.prototype.open = function (method, url, async, user, password) {
-        var out = this._gjs_open.apply(this, arguments);
-        this.xhrParams = {
-          method: method.toString(),
-          url: url.toString()
+        win.XMLHttpRequest.prototype._gjs_open = win.XMLHttpRequest.prototype.open;
+        win.XMLHttpRequest.prototype.open = function (method, url, async, user, password) {
+          var out = this._gjs_open.apply(this, arguments);
+          this.xhrParams = {
+            method: method.toString(),
+            url: url.toString()
+          };
+          return out;
         };
-        return out;
-      };
 
-      win.XMLHttpRequest.prototype._gjs_send = win.XMLHttpRequest.prototype.send;
-      win.XMLHttpRequest.prototype.send = function (body) {
+        win.XMLHttpRequest.prototype._gjs_send = win.XMLHttpRequest.prototype.send;
+        win.XMLHttpRequest.prototype.send = function (body) {
 
         // parse the xhr request to determine if any events should be triggered
         var events = false;
@@ -895,8 +895,8 @@ var Gmail = function(localJQuery, GLOBALS) {
 
   /**
     Bind a specified callback to an array of callbacks against a specified type & action
-   */
-  api.observe.bind = function(type, action, callback) {
+    */
+    api.observe.bind = function(type, action, callback) {
 
     // set up watchdog data structure
     if(typeof api.tracker.watchdog != "object") {
@@ -932,8 +932,8 @@ var Gmail = function(localJQuery, GLOBALS) {
 
   /**
     an on event is observed just after gmail sends an xhr request
-   */
-  api.observe.on = function(action, callback, response_callback) {
+    */
+    api.observe.on = function(action, callback, response_callback) {
 
     // check for DOM observer actions, and if none found, the assume an XHR observer
     if(api.observe.on_dom(action, callback)) return true;
@@ -948,27 +948,27 @@ var Gmail = function(localJQuery, GLOBALS) {
   /**
     an before event is observed just prior to the gmail xhr request being sent
     before events have the ability to modify the xhr request before it is sent
-   */
-  api.observe.before = function(action, callback) {
-    api.observe.bind('before', action, callback);
-  }
+    */
+    api.observe.before = function(action, callback) {
+      api.observe.bind('before', action, callback);
+    }
 
   /**
     an after event is observed when the gmail xhr request returns from the server
     with the server response
-   */
-  api.observe.after = function(action, callback) {
-    api.observe.bind('after', action, callback);
-  }
+    */
+    api.observe.after = function(action, callback) {
+      api.observe.bind('after', action, callback);
+    }
 
   /**
     Checks if a specified action & type has anything bound to it
     If type is null, will check for this action bound on any type
     If action is null, will check for any actions bound to a type
-   */
-  api.observe.bound = function(action, type) {
-    if (typeof api.tracker.watchdog != "object") return false;
-    if (action) {
+    */
+    api.observe.bound = function(action, type) {
+      if (typeof api.tracker.watchdog != "object") return false;
+      if (action) {
 
       // if an object of actions (triggered events of format { event: [response] }) is passed, check if any of these are bound
       if(typeof action == 'object') {
@@ -990,8 +990,8 @@ var Gmail = function(localJQuery, GLOBALS) {
     Clear all callbacks for a specific type (before, on, after, dom) and action
     If action is null, all actions will be cleared
     If type is null, all types will be cleared
-   */
-  api.observe.off = function(action, type) {
+    */
+    api.observe.off = function(action, type) {
 
     // if watchdog is not set, bind has not yet been called so nothing to turn off
     if(typeof api.tracker.watchdog != "object") return true;
@@ -1031,11 +1031,11 @@ var Gmail = function(localJQuery, GLOBALS) {
   /**
     Trigger any specified events bound to the passed type
     Returns true or false depending if any events were fired
-   */
-  api.observe.trigger = function(type, events, xhr) {
-    if(!events) return false;
-    var fired = false;
-    $.each(events, function(action,response) {
+    */
+    api.observe.trigger = function(type, events, xhr) {
+      if(!events) return false;
+      var fired = false;
+      $.each(events, function(action,response) {
 
       // we have to do this here each time to keep backwards compatibility with old response_callback implementation
       response = $.extend([], response); // break the reference so it doesn't keep growing each trigger
@@ -1048,13 +1048,13 @@ var Gmail = function(localJQuery, GLOBALS) {
         });
       }
     });
-    return fired;
-  }
+      return fired;
+    }
 
   /**
     Trigger any specified DOM events passing a specified element & optional handler
-   */
-  api.observe.trigger_dom = function(observer, element, handler) {
+    */
+    api.observe.trigger_dom = function(observer, element, handler) {
 
     // if no defined handler, just call the callback
     if (!handler) {
@@ -1121,15 +1121,15 @@ var Gmail = function(localJQuery, GLOBALS) {
 
           // when the dropdown menu next to the reply button is inserted into the DOM when viewing an email
           'load_email_menu': {
-              class: 'J-N',
+            class: 'J-N',
               selector: 'div[role=menu] div[role=menuitem]:first-child', // use the first menu item in the popoup as the indicator to trigger this observer
               handler: function(match, callback) {
                 match = match.closest('div[role=menu]');
                 callback(match);
               }
+            }
           }
-        }
-      },
+        },
 
       // a new email address is added to any of the to,cc,bcc fields when composing a new email or replying/forwarding
       'recipient_change': {
@@ -1207,8 +1207,8 @@ var Gmail = function(localJQuery, GLOBALS) {
       className / args - for a simple observer, this arg can simply be the class on an inserted DOM element that identifies this event should be
         triggered. For a more complicated observer, this can be an object containing properties for each of the supported DOM observer config arguments
       parent - optional - if specified, this observer will be registered as a sub_observer for the specified parent
-   */
-  api.observe.register = function(action, args, parent) {
+      */
+      api.observe.register = function(action, args, parent) {
 
     // check observers configured
     if (api.tracker.dom_observer_init) {
@@ -1247,8 +1247,8 @@ var Gmail = function(localJQuery, GLOBALS) {
     Observe DOM nodes being inserted. When a node with a class defined in api.tracker.dom_observers is inserted,
     trigger the related event and fire off any relevant bound callbacks
     This function should return true if a dom observer is found for the specified action
-   */
-  api.observe.on_dom = function(action, callback) {
+    */
+    api.observe.on_dom = function(action, callback) {
 
     // check observers configured
     if(!api.tracker.dom_observer_init) {
@@ -1277,7 +1277,7 @@ var Gmail = function(localJQuery, GLOBALS) {
       return true;
 
     // support for gmail interface load event
-    } else if(action == 'load') {
+  } else if(action == 'load') {
 
       // wait until the gmail interface has finished loading and then
       // execute the passed handler. If interface is already loaded,
@@ -1355,135 +1355,135 @@ var Gmail = function(localJQuery, GLOBALS) {
         }
       }
     });
-  }
+}
 
 
-  api.tools.make_request = function (link, method) {
+api.tools.make_request = function (link, method) {
 
-    var method  = (typeof method == undefined || typeof method == null) ? 'GET' : method;
-    var request = $.ajax({ type: method, url: encodeURI(link), async:false });
+  var method  = (typeof method == undefined || typeof method == null) ? 'GET' : method;
+  var request = $.ajax({ type: method, url: encodeURI(link), async:false });
 
-    return request.responseText;
-  }
+  return request.responseText;
+}
 
 
-  api.tools.parse_view_data = function(view_data) {
-    var parsed = [];
-    var data = [];
+api.tools.parse_view_data = function(view_data) {
+  var parsed = [];
+  var data = [];
 
-    for(var j=0; j < view_data.length; j++) {
-      if(view_data[j][0] == 'tb') {
-        for(var k=0; k < view_data[j][2].length; k++) {
-          data.push(view_data[j][2][k]);
-        }
+  for(var j=0; j < view_data.length; j++) {
+    if(view_data[j][0] == 'tb') {
+      for(var k=0; k < view_data[j][2].length; k++) {
+        data.push(view_data[j][2][k]);
       }
     }
+  }
 
-    for(var i=0; i < data.length; i++) {
-      var x = data[i];
-      var temp = {};
+  for(var i=0; i < data.length; i++) {
+    var x = data[i];
+    var temp = {};
 
-      parsed.push({
-        id: x[0],
-        title : x[9],
-        excerpt : x[10],
-        time : x[15],
-        sender : x[28],
-        attachment : x[13],
-        labels: x[5]
+    parsed.push({
+      id: x[0],
+      title : x[9],
+      excerpt : x[10],
+      time : x[15],
+      sender : x[28],
+      attachment : x[13],
+      labels: x[5]
+    });
+  }
+
+  return parsed;
+}
+
+
+api.get.visible_emails = function() {
+  var page = api.get.current_page();
+  var url = window.location.origin + window.location.pathname + '?ui=2&ik=' + api.tracker.ik+'&rid=' + api.tracker.rid + '&view=tl&start=0&num=120&rt=1';
+
+  if(page.indexOf('label/') == 0) {
+    url += '&cat=' + page.split('/')[1] +'&search=cat';
+  } else if(page.indexOf('category/') == 0) {
+    if(page.indexOf('forums') != -1) {
+      cat_label = 'group';
+    } else if(page.indexOf('updates') != -1) {
+      cat_label = 'notification';
+    } else if(page.indexOf('promotion') != -1) {
+      cat_label = 'promo';
+    } else if(page.indexOf('social') != -1) {
+      cat_label = 'social';
+    }
+    url += '&cat=^smartlabel_' + cat_label +'&search=category';
+  } else if(page.indexOf('search/') == 0) {
+    url += '&qs=true&q=' + page.split('/')[1] +'&search=query';
+  } else {
+    url += '&search=' + page;
+  }
+
+  var get_data = api.tools.make_request(url);
+  get_data = get_data.substring(get_data.indexOf('['), get_data.length);
+  get_data = 'api.tracker.view_data = ' + get_data;
+
+  eval(get_data)
+
+  var emails = [];
+
+  for(i in api.tracker.view_data) {
+    if (typeof(api.tracker.view_data[i]) === 'function') {
+      continue;
+    }
+
+    var cdata = api.tools.parse_view_data(api.tracker.view_data[i]);
+    if(cdata.length > 0) {
+      $.merge(emails, cdata);
+    }
+  }
+
+  return emails;
+}
+
+api.get.selected_emails_data = function(){
+  var selected_emails = [];
+  if(!api.check.is_inside_email()){
+    if($('[gh="tl"] div[role="checkbox"][aria-checked="true"]').length){
+      var email = null;
+      var emails = api.get.visible_emails();
+      $('[gh="tl"] div[role="checkbox"]').each(function(index){
+        if($(this).attr('aria-checked') == "true"){
+          email = api.get.email_data(emails[index].id);
+          selected_emails.push(email);
+        }
       });
     }
+  }else {
+    selected_emails.push(api.get.email_data());
+  }
+  return selected_emails;
+}
 
-    return parsed;
+api.get.current_page = function() {
+  var hash  = window.location.hash.split('#').pop();
+  var pages = ['sent', 'inbox', 'starred', 'drafts', 'imp', 'chats', 'all', 'spam', 'trash', 'settings'];
+
+  var page = null;
+
+  if($.inArray(hash, pages) > -1) {
+    page = hash;
   }
 
-
-  api.get.visible_emails = function() {
-    var page = api.get.current_page();
-    var url = window.location.origin + window.location.pathname + '?ui=2&ik=' + api.tracker.ik+'&rid=' + api.tracker.rid + '&view=tl&start=0&num=120&rt=1';
-
-    if(page.indexOf('label/') == 0) {
-      url += '&cat=' + page.split('/')[1] +'&search=cat';
-    } else if(page.indexOf('category/') == 0) {
-      if(page.indexOf('forums') != -1) {
-        cat_label = 'group';
-      } else if(page.indexOf('updates') != -1) {
-        cat_label = 'notification';
-      } else if(page.indexOf('promotion') != -1) {
-        cat_label = 'promo';
-      } else if(page.indexOf('social') != -1) {
-        cat_label = 'social';
-      }
-      url += '&cat=^smartlabel_' + cat_label +'&search=category';
-    } else if(page.indexOf('search/') == 0) {
-      url += '&qs=true&q=' + page.split('/')[1] +'&search=query';
-    } else {
-      url += '&search=' + page;
-    }
-
-    var get_data = api.tools.make_request(url);
-        get_data = get_data.substring(get_data.indexOf('['), get_data.length);
-        get_data = 'api.tracker.view_data = ' + get_data;
-
-    eval(get_data)
-
-    var emails = [];
-
-    for(i in api.tracker.view_data) {
-      if (typeof(api.tracker.view_data[i]) === 'function') {
-        continue;
-      }
-
-      var cdata = api.tools.parse_view_data(api.tracker.view_data[i]);
-      if(cdata.length > 0) {
-        $.merge(emails, cdata);
-      }
-    }
-
-    return emails;
-  }
-
-  api.get.selected_emails_data = function(){
-    var selected_emails = [];
-    if(!api.check.is_inside_email()){
-      if($('[gh="tl"] div[role="checkbox"][aria-checked="true"]').length){
-        var email = null;
-        var emails = api.get.visible_emails();
-        $('[gh="tl"] div[role="checkbox"]').each(function(index){
-          if($(this).attr('aria-checked') == "true"){
-            email = api.get.email_data(emails[index].id);
-            selected_emails.push(email);
-          }
-        });
-      }
-    }else {
-      selected_emails.push(api.get.email_data());
-    }
-    return selected_emails;
-  }
-
-  api.get.current_page = function() {
-    var hash  = window.location.hash.split('#').pop();
-    var pages = ['sent', 'inbox', 'starred', 'drafts', 'imp', 'chats', 'all', 'spam', 'trash', 'settings'];
-
-    var page = null;
-
-    if($.inArray(hash, pages) > -1) {
+  if(hash.indexOf('label/') == 0 || hash.indexOf('category/') == 0 || hash.indexOf('search/') == 0 || hash.indexOf('settings/') == 0) {
+    if(hash.split('/').length < 3) {
       page = hash;
     }
-
-    if(hash.indexOf('label/') == 0 || hash.indexOf('category/') == 0 || hash.indexOf('search/') == 0 || hash.indexOf('settings/') == 0) {
-      if(hash.split('/').length < 3) {
-        page = hash;
-      }
-    }
-
-    return page;
   }
 
+  return page;
+}
 
-  api.tools.infobox = function(message, time, html){
-    var top = $(".b8.UC");
+
+api.tools.infobox = function(message, time, html){
+  var top = $(".b8.UC");
 
     // initial Gmail style I noticed on 26 / 05 / 2014 for $(".b8.UC") :
     // style="position: relative; top: -10000px;"
@@ -1527,7 +1527,7 @@ var Gmail = function(localJQuery, GLOBALS) {
    *
    * If a callback is passed, it will be invoked after re-rendering is complete.
    */
-  api.tools.rerender = function(callback) {
+   api.tools.rerender = function(callback) {
     var url = window.location.href;
     var hash = window.location.hash;
 
@@ -1535,13 +1535,13 @@ var Gmail = function(localJQuery, GLOBALS) {
     // UI from changing as we navigate away by visiting an equivalent URL: the current URL with the
     // first parameter of the hash stripped ('#inbox/14a16fab4adc1456' -> '#/14a16fab4adc1456' or
     // '#inbox' -> '#').
-    var tempUrl;
-    if (hash.indexOf('/') !== -1) {
-      tempUrl = url.replace(/#.*?\//, '#/');
-    } else {
-      tempUrl = url.replace(/#.*/, '#');
-    }
-    window.location.replace(tempUrl);
+var tempUrl;
+if (hash.indexOf('/') !== -1) {
+  tempUrl = url.replace(/#.*?\//, '#/');
+} else {
+  tempUrl = url.replace(/#.*/, '#');
+}
+window.location.replace(tempUrl);
 
     // Return to the original URL after a 0-timeout to force Gmail to navigate to the temp URL.
     setTimeout(function() {
@@ -1549,10 +1549,10 @@ var Gmail = function(localJQuery, GLOBALS) {
 
       // For some reason, the two replace operations above create a history entry (tested in
       // Chrome 39.0.2171.71). Pop it to hide our URL manipulation.
-      window.history.back();
+    window.history.back();
 
-      if (callback) callback();
-    }, 0);
+    if (callback) callback();
+  }, 0);
   }
 
   api.tools.parse_email_data = function(email_data) {
@@ -1611,8 +1611,8 @@ var Gmail = function(localJQuery, GLOBALS) {
     if(email_id != undefined) {
       var url = window.location.origin + window.location.pathname + '?ui=2&ik=' + api.tracker.ik + '&rid=' + api.tracker.rid + '&view=cv&th=' + email_id + '&msgs=&mb=0&rt=1&search=inbox';
       var get_data = api.tools.make_request(url);
-          get_data = get_data.substring(get_data.indexOf('['), get_data.length);
-          get_data = 'var cdata = ' + get_data;
+      get_data = get_data.substring(get_data.indexOf('['), get_data.length);
+      get_data = 'var cdata = ' + get_data;
 
       eval(get_data);
 
@@ -1681,7 +1681,7 @@ var Gmail = function(localJQuery, GLOBALS) {
 
           displayed_email_data.people_involved.push(
             [email.from, email.from_email]
-          );
+            );
 
           email.to.forEach(function(recipient) {
             var address = api.tools.extract_email_address(recipient);
@@ -1689,7 +1689,7 @@ var Gmail = function(localJQuery, GLOBALS) {
 
             displayed_email_data.people_involved.push(
               [name, address]
-            );
+              );
           });
 
           break;
@@ -1743,41 +1743,41 @@ var Gmail = function(localJQuery, GLOBALS) {
 
     switch (locale) {
       case 'fr':
-        dictionary = {
-          'inbox': 'Boîte de réception',
-          'drafts': 'Brouillons',
-          'spam': 'Spam',
-          'forums': 'Forums',
-          'updates': 'Mises à jour',
-          'promotions': 'Promotions',
-          'social_updates': 'Réseaux sociaux'
-        };
-        break;
+      dictionary = {
+        'inbox': 'Boîte de réception',
+        'drafts': 'Brouillons',
+        'spam': 'Spam',
+        'forums': 'Forums',
+        'updates': 'Mises à jour',
+        'promotions': 'Promotions',
+        'social_updates': 'Réseaux sociaux'
+      };
+      break;
 
       case 'nl':
-        dictionary = {
-          'inbox': 'Postvak IN',
-          'drafts': 'Concepten',
-          'spam': 'Spam',
-          'forums': 'Forums',
-          'updates': 'Updates',
-          'promotions': 'Reclame',
-          'social_updates': 'Sociaal'
-        };
-        break;
+      dictionary = {
+        'inbox': 'Postvak IN',
+        'drafts': 'Concepten',
+        'spam': 'Spam',
+        'forums': 'Forums',
+        'updates': 'Updates',
+        'promotions': 'Reclame',
+        'social_updates': 'Sociaal'
+      };
+      break;
 
       case 'en':
       default:
-        dictionary = {
-          'inbox': 'Inbox',
-          'drafts': 'Drafts',
-          'spam': 'Spam',
-          'forums': 'Forums',
-          'updates': 'Updates',
-          'promotions': 'Promotions',
-          'social_updates': 'Social Updates'
-        };
-        break;
+      dictionary = {
+        'inbox': 'Inbox',
+        'drafts': 'Drafts',
+        'spam': 'Spam',
+        'forums': 'Forums',
+        'updates': 'Updates',
+        'promotions': 'Promotions',
+        'social_updates': 'Social Updates'
+      };
+      break;
     }
 
     return dictionary[label];
@@ -1793,28 +1793,28 @@ var Gmail = function(localJQuery, GLOBALS) {
       styleClass != null &&
       styleClass != ''){
       buttonClasses += styleClass;
-    }else{
-      buttonClasses += 'T-I-ax7 ar7';
-    }
-    button.attr('class', buttonClasses);
-
-    button.html(content);
-    button.click(onClickFunction);
-
-    var content = $(document.createElement('div'));
-    content.attr('class','asa');
-
-    container.html(button);
-
-    api.dom.toolbar().append(container);
-
-    return container;
+  }else{
+    buttonClasses += 'T-I-ax7 ar7';
   }
+  button.attr('class', buttonClasses);
 
-  api.chat.is_hangouts = function() {
-    if(api.tracker.hangouts != undefined) {
-      return api.tracker.hangouts;
-    }
+  button.html(content);
+  button.click(onClickFunction);
+
+  var content = $(document.createElement('div'));
+  content.attr('class','asa');
+
+  container.html(button);
+
+  api.dom.toolbar().append(container);
+
+  return container;
+}
+
+api.chat.is_hangouts = function() {
+  if(api.tracker.hangouts != undefined) {
+    return api.tracker.hangouts;
+  }
 
     // Returns true if the user is using hangouts instead of the classic chat
     var dwClasses = $(".dw");
@@ -1857,38 +1857,38 @@ var Gmail = function(localJQuery, GLOBALS) {
     A compose object. Represents a compose window in the DOM and provides a bunch of methods and properties to access & interact with the window
     Expects a jQuery DOM element for the compose div
     TODO: Make to, cc, cc etc functions receive an argument to set these fields
-   */
-  api.dom.compose = function(element) {
-    element = $(element);
-    if(!element || (!element.hasClass('M9') && !element.hasClass('AD'))) api.tools.error('api.dom.compose called with invalid element');
-    this.$el = element;
-    return this;
-  }
-  $.extend(api.dom.compose.prototype, {
+    */
+    api.dom.compose = function(element) {
+      element = $(element);
+      if(!element || (!element.hasClass('M9') && !element.hasClass('AD'))) api.tools.error('api.dom.compose called with invalid element');
+      this.$el = element;
+      return this;
+    }
+    $.extend(api.dom.compose.prototype, {
 
     /**
       Retrieve the compose id
-     */
-    id: function() {
-      return this.dom('id').val();
-    },
+      */
+      id: function() {
+        return this.dom('id').val();
+      },
 
     /**
       Is this compose instance inline (as with reply & forwards) or a popup (as with a new compose)
-     */
-    is_inline: function() {
-      return this.$el.closest('td.Bu').length > 0;
-    },
+      */
+      is_inline: function() {
+        return this.$el.closest('td.Bu').length > 0;
+      },
 
     /**
       Retrieves to, cc, bcc and returns them in a hash of arrays
       Parameters:
         options.type  string  to, cc, or bcc to check a specific one
         options.flat  boolean if true will just return an array of all recipients instead of splitting out into to, cc, and bcc
-     */
-    recipients: function(options) {
-      if( typeof options != 'object' ) options = {};
-      var name_selector = options.type ? '[name=' + options.type + ']' : '';
+        */
+        recipients: function(options) {
+          if( typeof options != 'object' ) options = {};
+          var name_selector = options.type ? '[name=' + options.type + ']' : '';
 
       // determine an array of all emails specified for To, CC and BCC and extract addresses into an object for the callback
       var recipients = options.flat ? [] : {};
@@ -1906,89 +1906,89 @@ var Gmail = function(localJQuery, GLOBALS) {
     /**
       Retrieve the current 'to' recipients
       TODO: ability to set
-     */
-    to: function(to) {
-      return this.recipients( { type: 'to', flat: true } );
-    },
+      */
+      to: function(to) {
+        return this.recipients( { type: 'to', flat: true } );
+      },
 
     /**
       Retrieve the current 'cc' recipients
       TODO: ability to set
-     */
-    cc: function() {
-      return this.recipients( { type: 'cc', flat: true } );
-    },
+      */
+      cc: function() {
+        return this.recipients( { type: 'cc', flat: true } );
+      },
 
     /**
       Retrieve the current 'bcc' recipients
       TODO: ability to set
-     */
-    bcc: function() {
-      return this.recipients( { type: 'bcc', flat: true } );
-    },
+      */
+      bcc: function() {
+        return this.recipients( { type: 'bcc', flat: true } );
+      },
 
     /**
       Get/Set the current subject
       Parameters:
         subject   string  set as new subject
-     */
-    subject: function(subject) {
-      var el = this.dom('subjectbox');
-      if(subject) this.dom('all_subjects').val(subject);
-      subject = this.dom('subjectbox').val();
-      return subject ? subject : this.dom('subject').val();
-    },
+        */
+        subject: function(subject) {
+          var el = this.dom('subjectbox');
+          if(subject) this.dom('all_subjects').val(subject);
+          subject = this.dom('subjectbox').val();
+          return subject ? subject : this.dom('subject').val();
+        },
 
     /**
       Get/Set the email body
-     */
-    body: function(body) {
-      var el = this.dom('body');
-      if(body) el.html(body);
-      return el.html();
-    },
+      */
+      body: function(body) {
+        var el = this.dom('body');
+        if(body) el.html(body);
+        return el.html();
+      },
 
     /**
       Map find through to jquery element
-     */
-    find: function(selector) {
-      return this.$el.find(selector);
-    },
+      */
+      find: function(selector) {
+        return this.$el.find(selector);
+      },
 
     /**
       Retrieve preconfigured dom elements for this compose window
-     */
-    dom: function(lookup) {
-      if (!lookup) return this.$el;
-      var config = {
-        id: 'input[name=composeid]',
-        subject: 'input[name=subject]',
-        subjectbox: 'input[name=subjectbox]',
-        all_subjects: 'input[name=subjectbox], input[name=subject]',
-        body: 'div[contenteditable=true]',
-        reply: 'M9',
-        forward: 'M9',
-      };
-      if(!config[lookup]) api.tools.error('Dom lookup failed. Unable to find config for \'' + lookup + '\'',config,lookup,config[lookup]);
-      return this.$el.find(config[lookup]);
-    }
+      */
+      dom: function(lookup) {
+        if (!lookup) return this.$el;
+        var config = {
+          id: 'input[name=composeid]',
+          subject: 'input[name=subject]',
+          subjectbox: 'input[name=subjectbox]',
+          all_subjects: 'input[name=subjectbox], input[name=subject]',
+          body: 'div[contenteditable=true]',
+          reply: 'M9',
+          forward: 'M9',
+        };
+        if(!config[lookup]) api.tools.error('Dom lookup failed. Unable to find config for \'' + lookup + '\'',config,lookup,config[lookup]);
+        return this.$el.find(config[lookup]);
+      }
 
-  });
+    });
 
   /**
     An object for interacting with an email currently present in the DOM. Represents an individual email message within a thread
     Provides a number of methods and properties to access & interact with it
     Expects a jQuery DOM element for the email div (div.adn as returned by the 'view_email' observer), or an email_id
-   */
-  api.dom.email = function(element) {
-    if (typeof element == 'string') {
-      this.id = element;
-      this.id_element = $('div.ii.gt.m' + this.id);
-      element = this.id_element.closest('div.adn');
-    } else {
-      element = $(element);
-    }
-    if (!element || (!element.hasClass('adn'))) api.tools.error('api.dom.email called with invalid element/id');
+    */
+    api.dom.email = function(element) {
+      if (typeof element == 'string') {
+        this.id = element;
+        this.id_element = $('div.ii.gt.m' + this.id);
+        element = this.id_element.closest('div.adn');
+      } else {
+        element = $(element);
+      }
+      if (!element || (!element.hasClass('adn'))) api.tools.error('api.dom.email called with invalid element/id');
 
     // if no id specified, extract from the body wrapper class (starts with 'm' followed by the id)
     if (!this.id) {
@@ -2004,43 +2004,43 @@ var Gmail = function(localJQuery, GLOBALS) {
       Get/Set the full email body as it sits in the DOM
       If you want the actual DOM element use .dom('body');
       Note: This gets & sets the body html after it has been parsed & marked up by GMAIL. To retrieve it as it exists in the email message source, use a call to .data();
-     */
-    body: function(body) {
-      var el = this.dom('body');
-      if (body) {
-        el.html(body);
-      }
-      return el.html();
-    },
+      */
+      body: function(body) {
+        var el = this.dom('body');
+        if (body) {
+          el.html(body);
+        }
+        return el.html();
+      },
 
     /**
       Get/Set the sender
       Optionally receives email and name properties. If received updates the values in the DOM
       Returns an object containing email & name of the sender and dom element
-     */
-    from: function(email, name) {
-      var el = this.dom('from');
-      if (email) {
-        el.attr('email',email);
-      }
-      if (name) {
-        el.attr('name',name);
-        el.html(name);
-      }
-      return {
-        email: el.attr('email'),
-        name: el.attr('name'),
-        el: el
-      };
-    },
+      */
+      from: function(email, name) {
+        var el = this.dom('from');
+        if (email) {
+          el.attr('email',email);
+        }
+        if (name) {
+          el.attr('name',name);
+          el.html(name);
+        }
+        return {
+          email: el.attr('email'),
+          name: el.attr('name'),
+          el: el
+        };
+      },
 
     /**
       Get/Set who the email is showing as To
       Optionally receives an object containing email and/or name properties. If received updates the values in the DOM.
       Optionally receives an array of these objects if multiple recipients
       Returns an array of objects containing email & name of who is showing in the DOM as the email is to
-     */
-    to: function(to_array) {
+      */
+      to: function(to_array) {
 
       // if update data has been passeed, loop through & create a new to_wrapper contents
       if (to_array) {
@@ -2076,12 +2076,12 @@ var Gmail = function(localJQuery, GLOBALS) {
       Retrieve relevant email from the Gmail servers for this email
       Makes use of the gmail.get.email_data() method
       Returns an object
-     */
-    data: function() {
-      if (typeof api.dom.email_cache != 'object') {
-        api.dom.email_cache = {};
-      }
-      if (!api.dom.email_cache[this.id]) {
+      */
+      data: function() {
+        if (typeof api.dom.email_cache != 'object') {
+          api.dom.email_cache = {};
+        }
+        if (!api.dom.email_cache[this.id]) {
 
         // retrieve & cache the data for this whole thread of emails
         var data = api.get.email_data(this.id);
@@ -2096,23 +2096,23 @@ var Gmail = function(localJQuery, GLOBALS) {
       Retrieve email source for this email from the Gmail servers
       Makes use of the gmail.get.email_source() method
       Returns string of email raw source
-     */
-    source: function() {
-      return api.get.email_source(this.id);
-    },
+      */
+      source: function() {
+        return api.get.email_source(this.id);
+      },
 
     /**
       Retrieve preconfigured dom elements for this email
-     */
-    dom: function(lookup) {
-      if (!lookup) return this.$el;
-      var config = {
-        body: 'div.a3s',
-        from: 'span[email].gD',
-        to: 'span[email].g2',
-        to_wrapper: 'span.hb',
-        timestamp: 'span.g3',
-        star: 'div.zd',
+      */
+      dom: function(lookup) {
+        if (!lookup) return this.$el;
+        var config = {
+          body: 'div.a3s',
+          from: 'span[email].gD',
+          to: 'span[email].g2',
+          to_wrapper: 'span.hb',
+          timestamp: 'span.g3',
+          star: 'div.zd',
 
         // buttons
         reply_button: 'div[role=button].aaq',
@@ -2129,29 +2129,29 @@ var Gmail = function(localJQuery, GLOBALS) {
     An object for interacting with an email currently present in the DOM. Represents a conversation thread
     Provides a number of methods and properties to access & interact with it
     Expects a jQuery DOM element for the thread wrapper div (div.if as returned by the 'view_thread' observer)
-   */
-  api.dom.thread = function(element) {
-    if (!element || (!element.hasClass('if'))) api.tools.error('api.dom.thread called with invalid element/id');
-    this.$el = element;
-    return this;
-  }
-  $.extend(api.dom.thread.prototype, {
+    */
+    api.dom.thread = function(element) {
+      if (!element || (!element.hasClass('if'))) api.tools.error('api.dom.thread called with invalid element/id');
+      this.$el = element;
+      return this;
+    }
+    $.extend(api.dom.thread.prototype, {
 
     /**
       Retrieve preconfigured dom elements for this email
-     */
-    dom: function(lookup) {
-      if (!lookup) return this.$el;
-      var config = {
-        opened_email: 'div.adn',
-        subject: 'h2.hP',
-        labels: 'div.hN',
-      };
-      if(!config[lookup]) api.tools.error('Dom lookup failed. Unable to find config for \'' + lookup + '\'');
-      return this.$el.find(config[lookup]);
-    }
+      */
+      dom: function(lookup) {
+        if (!lookup) return this.$el;
+        var config = {
+          opened_email: 'div.adn',
+          subject: 'h2.hP',
+          labels: 'div.hN',
+        };
+        if(!config[lookup]) api.tools.error('Dom lookup failed. Unable to find config for \'' + lookup + '\'');
+        return this.$el.find(config[lookup]);
+      }
 
-  });
+    });
 
  /**
   *  Show a compose window
